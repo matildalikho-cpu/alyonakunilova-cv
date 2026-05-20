@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import alenaPhoto from "@/assets/alena.png";
 
 export const Route = createFileRoute("/")({
@@ -164,14 +164,12 @@ function Resume() {
             <span className="hidden h-6 w-px bg-border sm:block" />
             <span className="hidden text-base text-muted-foreground sm:block">Работа у нас</span>
           </div>
-          <a
-            href="https://kontur.ru/career/vacancies/5737#ResumeForm"
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/chatgpt"
             className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:opacity-90"
           >
-            К вакансии →
-          </a>
+            Что говорит ChatGPT →
+          </Link>
         </div>
       </header>
 
@@ -199,22 +197,12 @@ function Resume() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">
-              <a
-                href="https://kontur.ru/career/vacancies/5737#ResumeForm"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/chatgpt"
                 className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
               >
-                Откликнуться →
-              </a>
-              <a
-                href="https://chatgpt.com/share/6a0d4324-51ac-83eb-a776-3a3360c9fc81"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-base font-medium text-foreground transition-colors hover:bg-secondary"
-              >
-                Что говорит ChatGPT →
-              </a>
+                Что говорит про меня ChatGPT →
+              </Link>
             </div>
           </div>
 
@@ -349,36 +337,12 @@ function Resume() {
             я попросила ChatGPT, с которым мы ежедневно работаем над проектами, рассказать про
             меня подробнее.
           </p>
-          <a
-            href="https://chatgpt.com/share/6a0d4324-51ac-83eb-a776-3a3360c9fc81"
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/chatgpt"
             className="mt-8 inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
           >
             Прочитать рассказ ChatGPT →
-          </a>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="border-t border-border bg-background">
-        <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-16 md:flex-row md:items-center md:justify-between">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-              Готова присоединиться к команде Толк
-            </h2>
-            <p className="mt-3 text-lg text-muted-foreground">
-              Екатеринбург · в офисе, удалённо или гибридно
-            </p>
-          </div>
-          <a
-            href="https://kontur.ru/career/vacancies/5737#ResumeForm"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center rounded-full bg-primary px-7 py-4 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
-          >
-            Откликнуться →
-          </a>
+          </Link>
         </div>
       </section>
 
