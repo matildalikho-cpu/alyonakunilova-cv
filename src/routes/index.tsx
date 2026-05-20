@@ -261,9 +261,6 @@ function Resume() {
           </div>
 
           <div className="relative">
-            <div className="absolute -left-4 -top-4 h-16 w-16 rounded-2xl bg-[var(--kontur-green)]" />
-            <div className="absolute -right-3 top-8 h-12 w-12 rounded-2xl bg-[var(--kontur-orange)]" />
-            <div className="absolute -bottom-4 left-10 h-14 w-14 rounded-2xl bg-[var(--kontur-purple)]" />
             <img
               src={alenaPhoto}
               alt="Алёна Кунилова"
