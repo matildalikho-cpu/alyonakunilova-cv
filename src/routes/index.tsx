@@ -194,8 +194,18 @@ function Resume() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
-          <span className="text-2xl font-bold tracking-tight">Контур</span>
-          <nav className="hidden flex-1 items-center justify-center gap-6 text-sm text-muted-foreground lg:flex">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl font-bold tracking-tight">Контур</span>
+            <a
+              href="https://kontur.ru/career/vacancies/5737#ResumeForm"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:opacity-90"
+            >
+              К вакансии →
+            </a>
+          </div>
+          <nav className="hidden items-center gap-6 text-sm text-muted-foreground lg:flex">
             <a href="#about" className="transition-colors hover:text-foreground">О себе</a>
             <a href="#experience" className="transition-colors hover:text-foreground">Опыт работы</a>
             <a href="#skills" className="transition-colors hover:text-foreground">Навыки</a>
