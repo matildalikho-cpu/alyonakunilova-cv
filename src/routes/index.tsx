@@ -185,7 +185,17 @@ const projects: React.ReactNode[] = [
   </>,
   "Редактор проекта «Код города» — книга о ДНК Екатеринбурга (2022)",
   "Редактор: Продюсерский центр Андрея Кончаловского, Музей истории Екатеринбурга (2021–2022)",
-  "Участник сообщества «Екб_гуляем», автор городских прогулок и паблика «Улица Бажова»",
+  <>
+    Участник сообщества «Екб_гуляем», автор городских прогулок и паблика{" "}
+    <a
+      href="https://t.me/ulitsabazhova"
+      target="_blank"
+      rel="noreferrer"
+      className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+    >
+      «Улица Бажова»
+    </a>
+  </>,
 ];
 
 function Resume() {
