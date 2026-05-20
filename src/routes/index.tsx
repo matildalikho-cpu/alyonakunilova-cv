@@ -157,19 +157,17 @@ function Resume() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
-      <header className="border-b border-border">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <div className="flex items-center gap-3">
-            <span className="text-2xl font-bold tracking-tight">Контур</span>
-            <span className="hidden h-6 w-px bg-border sm:block" />
-            <span className="hidden text-base text-muted-foreground sm:block">Работа у нас</span>
-          </div>
-          <Link
-            to="/chatgpt"
-            className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:opacity-90"
-          >
-            Что говорит ChatGPT →
-          </Link>
+      <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
+          <span className="text-2xl font-bold tracking-tight">Контур</span>
+          <nav className="hidden flex-1 items-center justify-center gap-6 text-sm text-muted-foreground lg:flex">
+            <a href="#about" className="transition-colors hover:text-foreground">О себе</a>
+            <a href="#experience" className="transition-colors hover:text-foreground">Опыт работы</a>
+            <a href="#skills" className="transition-colors hover:text-foreground">Навыки</a>
+            <a href="#education" className="transition-colors hover:text-foreground">Образование</a>
+            <a href="#projects" className="transition-colors hover:text-foreground">Проекты</a>
+            <a href="#motivation" className="transition-colors hover:text-foreground">Мотивация и рекомендации</a>
+          </nav>
         </div>
       </header>
 
