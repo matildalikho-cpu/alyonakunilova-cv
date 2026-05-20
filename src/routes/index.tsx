@@ -215,7 +215,7 @@ function Resume() {
               К вакансии →
             </a>
           </div>
-          <nav className="hidden items-center gap-6 text-sm text-muted-foreground lg:flex">
+          <nav className="hidden items-center gap-x-5 gap-y-2 text-sm text-muted-foreground md:flex md:flex-wrap md:justify-end">
             <a href="#about" className="transition-colors hover:text-foreground">О себе</a>
             <a href="#experience" className="transition-colors hover:text-foreground">Опыт работы</a>
             <a href="#skills" className="transition-colors hover:text-foreground">Навыки</a>
