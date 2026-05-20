@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Video } from "lucide-react";
-import alenaPhoto from "@/assets/alena.png";
+import alenaPhoto from "@/assets/profile-orange.png";
 import konturLogo from "@/assets/logo-kontur.png";
 
 
@@ -267,7 +267,7 @@ function Resume() {
             <img
               src={alenaPhoto}
               alt="Алёна Кунилова"
-              className="h-full w-full object-contain"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
