@@ -395,7 +395,7 @@ function Resume() {
               <div className="rounded-3xl border border-[var(--kontur-green)] bg-[var(--kontur-green)]/15 p-6">
                 <div className="text-sm font-medium uppercase tracking-wider text-foreground/70">Сейчас</div>
                 <div className="mt-2 text-lg font-semibold">
-                  Соло-маркетолог в международной PropTech-платформе
+                  Соло-маркетолог PropTech-платформы
                 </div>
               </div>
             </div>
