@@ -206,7 +206,7 @@ function Resume() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
           <div className="flex items-center gap-3">
-            <span className="text-2xl font-bold tracking-tight">Контур</span>
+            <img src={konturLogo} alt="Контур" className="h-7 w-auto" />
             <a
               href="https://kontur.ru/career/vacancies/5737#ResumeForm"
               target="_blank"
