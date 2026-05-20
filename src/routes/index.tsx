@@ -464,9 +464,46 @@ function Resume() {
         </div>
       </section>
 
+      {/* Contacts */}
+      <section id="contacts" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
+        <SectionTitle>Контакты</SectionTitle>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <a
+            href="mailto:salyona@gmail.com"
+            className="group rounded-3xl border border-border bg-card p-6 transition-colors hover:border-primary"
+          >
+            <div className="text-sm text-muted-foreground">Почта</div>
+            <div className="mt-2 text-lg font-medium text-foreground group-hover:text-primary">
+              salyona@gmail.com
+            </div>
+          </a>
+          <a
+            href="tel:+79120486250"
+            className="group rounded-3xl border border-border bg-card p-6 transition-colors hover:border-primary"
+          >
+            <div className="text-sm text-muted-foreground">Телефон</div>
+            <div className="mt-2 text-lg font-medium text-foreground group-hover:text-primary">
+              +7 912 048-62-50
+            </div>
+          </a>
+          <a
+            href="https://t.me/AlyonaRocket"
+            target="_blank"
+            rel="noreferrer"
+            className="group rounded-3xl border border-border bg-card p-6 transition-colors hover:border-primary"
+          >
+            <div className="text-sm text-muted-foreground">Telegram</div>
+            <div className="mt-2 text-lg font-medium text-foreground group-hover:text-primary">
+              @AlyonaRocket
+            </div>
+          </a>
+        </div>
+      </section>
+
       <footer className="border-t border-border">
-        <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-muted-foreground">
-          Резюме · Алёна Кунилова · {new Date().getFullYear()}
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <span>© 2026 Алёна Кунилова · Резюме для «Контур.Толк»</span>
+          <span>Сделано с уважением к стилю «Контура» ✦</span>
         </div>
       </footer>
     </div>
