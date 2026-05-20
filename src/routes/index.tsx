@@ -248,19 +248,6 @@ function Resume() {
             <p className="mt-6 text-2xl text-muted-foreground md:text-3xl">
               Контент-маркетолог в Толк, <span className="text-foreground">senior</span>
             </p>
-            <p className="mt-8 max-w-2xl text-lg text-foreground/80">
-              Специалист по маркетинговым коммуникациям с опытом в B2B, SaaS, AI, PropTech,
-              Gaming, Blockchain, Digital services, B2C и медиа.
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link
-                to="/chatgpt"
-                className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
-              >
-                Что говорит про меня ChatGPT →
-              </Link>
-            </div>
           </div>
 
           <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-[2rem] bg-[var(--kontur-orange)] md:h-80 md:w-80">
