@@ -337,36 +337,12 @@ function Resume() {
             я попросила ChatGPT, с которым мы ежедневно работаем над проектами, рассказать про
             меня подробнее.
           </p>
-          <a
-            href="https://chatgpt.com/share/6a0d4324-51ac-83eb-a776-3a3360c9fc81"
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/chatgpt"
             className="mt-8 inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
           >
             Прочитать рассказ ChatGPT →
-          </a>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="border-t border-border bg-background">
-        <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-16 md:flex-row md:items-center md:justify-between">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-              Готова присоединиться к команде Толк
-            </h2>
-            <p className="mt-3 text-lg text-muted-foreground">
-              Екатеринбург · в офисе, удалённо или гибридно
-            </p>
-          </div>
-          <a
-            href="https://kontur.ru/career/vacancies/5737#ResumeForm"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center rounded-full bg-primary px-7 py-4 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
-          >
-            Откликнуться →
-          </a>
+          </Link>
         </div>
       </section>
 
