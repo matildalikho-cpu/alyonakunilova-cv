@@ -38,7 +38,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 type Job = {
   company: string;
-  meta?: string;
+  meta?: React.ReactNode;
   period: string;
   role: string;
   body: React.ReactNode;
@@ -47,7 +47,19 @@ type Job = {
 const jobs: Job[] = [
   {
     company: "Unitify",
-    meta: "SaaS для управления недвижимостью · unitify.com",
+    meta: (
+      <>
+        SaaS для управления недвижимостью ·{" "}
+        <a
+          href="https://unitify.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+        >
+          unitify.com
+        </a>
+      </>
+    ),
     period: "ноябрь 2025 — н.в.",
     role: "Marketing Executive",
     body: (
@@ -77,7 +89,19 @@ const jobs: Job[] = [
   },
   {
     company: "Ridero",
-    meta: "Издательская платформа · ridero.ru",
+    meta: (
+      <>
+        Издательская платформа ·{" "}
+        <a
+          href="https://ridero.ru/"
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+        >
+          ridero.ru
+        </a>
+      </>
+    ),
     period: "нояб. 2015 — окт. 2021",
     role: "PR-менеджер",
     body: (
