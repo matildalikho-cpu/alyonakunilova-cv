@@ -352,8 +352,8 @@ function Resume() {
                 продаж и коммерческие предложения. Активно использую AI-инструменты в работе —
                 для текстов, изображений, видео, дизайна, лендингов.
               </p>
-              <div className="mt-6 flex items-center gap-3 rounded-2xl bg-foreground px-5 py-4 text-background">
-                <span className="text-2xl">💬</span>
+              <div className="mt-6 flex items-center gap-3 rounded-2xl bg-sky-500 px-5 py-4 text-white">
+                <Video className="h-6 w-6 shrink-0" strokeWidth={2.2} />
                 <p className="text-base">
                   И да — для созвонов внутри команды мы сейчас используем именно{" "}
                   <span className="font-semibold">«Толк»</span>.
