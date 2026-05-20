@@ -603,6 +603,16 @@ function Resume() {
               className="h-auto w-full"
             />
           </div>
+          <div className="mt-8 flex justify-center">
+            <a
+              href="https://t.me/AlyonaRocket"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
+            >
+              Позвать на интервью →
+            </a>
+          </div>
         </div>
       </section>
 
