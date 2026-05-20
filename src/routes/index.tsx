@@ -247,12 +247,20 @@ function Resume() {
             <p className="mt-4 text-xl text-muted-foreground md:text-2xl">
               Контент-маркетолог в Толк, <span className="text-foreground">senior</span>
             </p>
-            <a
-              href="#contacts"
-              className="mt-6 inline-flex items-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-            >
-              Контакты ↓
-            </a>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#contacts"
+                className="inline-flex items-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+              >
+                Контакты ↓
+              </a>
+              <a
+                href="#video"
+                className="inline-flex items-center rounded-full border border-[var(--kontur-orange)] bg-[var(--kontur-orange)]/15 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-[var(--kontur-orange)]/25"
+              >
+                Видеовизитка ↓
+              </a>
+            </div>
           </div>
 
           <div className="relative flex h-40 w-40 shrink-0 items-center justify-center overflow-hidden rounded-3xl bg-[var(--kontur-orange)] md:h-56 md:w-56">
