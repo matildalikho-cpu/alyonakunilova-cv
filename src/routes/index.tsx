@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import alenaPhoto from "@/assets/alena.png";
 
 export const Route = createFileRoute("/")({
@@ -164,14 +164,12 @@ function Resume() {
             <span className="hidden h-6 w-px bg-border sm:block" />
             <span className="hidden text-base text-muted-foreground sm:block">Работа у нас</span>
           </div>
-          <a
-            href="https://kontur.ru/career/vacancies/5737#ResumeForm"
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/chatgpt"
             className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:opacity-90"
           >
-            К вакансии →
-          </a>
+            Что говорит ChatGPT →
+          </Link>
         </div>
       </header>
 
@@ -199,22 +197,12 @@ function Resume() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">
-              <a
-                href="https://kontur.ru/career/vacancies/5737#ResumeForm"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/chatgpt"
                 className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
               >
-                Откликнуться →
-              </a>
-              <a
-                href="https://chatgpt.com/share/6a0d4324-51ac-83eb-a776-3a3360c9fc81"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-base font-medium text-foreground transition-colors hover:bg-secondary"
-              >
-                Что говорит ChatGPT →
-              </a>
+                Что говорит про меня ChatGPT →
+              </Link>
             </div>
           </div>
 
