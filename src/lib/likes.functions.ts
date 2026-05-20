@@ -1,5 +1,4 @@
 import { createServerFn } from "@tanstack/react-start";
-import { supabase } from "@/integrations/supabase/client";
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
 import { z } from "zod";
 
@@ -8,7 +7,7 @@ export const getLikesCount = createServerFn({ method: "GET" })
     const { count, error } = await supabaseAdmin
       .from("likes")
       .select("*", { count: "exact", head: true });
-    
+
     if (error) {
       console.error("Error fetching likes count:", error);
       return 0;
@@ -16,24 +15,61 @@ export const getLikesCount = createServerFn({ method: "GET" })
     return count || 0;
   });
 
-export const addLike = createServerFn({ method: "POST" })
+export const hasLiked = createServerFn({ method: "POST" })
+  .inputValidator(z.object({ fingerprint: z.string().min(1) }))
+  .handler(async ({ data }) => {
+    const { count, error } = await supabaseAdmin
+      .from("likes")
+      .select("*", { count: "exact", head: true })
+      .eq("fingerprint", data.fingerprint);
+
+    if (error) {
+      console.error("Error checking like:", error);
+      return false;
+    }
+    return (count ?? 0) > 0;
+  });
+
+export const toggleLike = createServerFn({ method: "POST" })
   .inputValidator(z.object({
+    fingerprint: z.string().min(1),
     userAgent: z.string().optional(),
-    fingerprint: z.string().optional(),
   }))
   .handler(async ({ data }) => {
-    const { error } = await supabase
+    const { data: existing, error: selErr } = await supabaseAdmin
+      .from("likes")
+      .select("id")
+      .eq("fingerprint", data.fingerprint)
+      .limit(1);
+
+    if (selErr) {
+      console.error("Error checking like:", selErr);
+      throw new Error("Failed to toggle like");
+    }
+
+    if (existing && existing.length > 0) {
+      const { error } = await supabaseAdmin
+        .from("likes")
+        .delete()
+        .eq("fingerprint", data.fingerprint);
+      if (error) {
+        console.error("Error removing like:", error);
+        throw new Error("Failed to remove like");
+      }
+      return { liked: false };
+    }
+
+    const { error } = await supabaseAdmin
       .from("likes")
       .insert({
         user_agent: data.userAgent,
         fingerprint: data.fingerprint,
       });
-
     if (error) {
       console.error("Error adding like:", error);
       throw new Error("Failed to add like");
     }
-    return { success: true };
+    return { liked: true };
   });
 
 export const getLikesList = createServerFn({ method: "POST" })
