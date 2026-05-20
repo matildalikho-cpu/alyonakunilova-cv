@@ -250,7 +250,7 @@ function Resume() {
             </p>
             <p className="mt-8 max-w-2xl text-lg text-foreground/80">
               Специалист по маркетинговым коммуникациям с опытом в B2B, SaaS, AI, PropTech,
-              Gaming, Blockchain, Digital services и B2C.
+              Gaming, Blockchain, Digital services, B2C и медиа.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">
