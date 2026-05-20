@@ -5,7 +5,7 @@ import { z } from "zod";
 
 export const getLikesCount = createServerFn({ method: "GET" })
   .handler(async () => {
-    const { count, error } = await supabase
+    const { count, error } = await supabaseAdmin
       .from("likes")
       .select("*", { count: "exact", head: true });
     
