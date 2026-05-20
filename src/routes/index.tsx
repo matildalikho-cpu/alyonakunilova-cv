@@ -251,9 +251,9 @@ const skillGroups = [
 
 const education = [
   { place: "МГИМО", what: "Международный маркетинг", note: "профпереподготовка · отлично" },
-  { place: "ИМС, Екатеринбург", what: "Связи с общественностью", note: "специалист · отлично" },
+  { place: "Институт Международных Связей", what: "Связи с общественностью", note: "специалист · отлично" },
   { place: "УГТУ–УПИ (УрФУ)", what: "Менеджмент", note: "квалификация: менеджер · отлично" },
-  { place: "ИМС, Екатеринбург", what: "Переводчик в сфере профессиональной коммуникации", note: "повышение квалификации" },
+  { place: "Институт Международных Связей", what: "Переводчик в сфере профессиональной коммуникации", note: "повышение квалификации" },
 ];
 
 const projects: React.ReactNode[] = [
@@ -602,6 +602,16 @@ function Resume() {
               preload="metadata"
               className="h-auto w-full"
             />
+          </div>
+          <div className="mt-8 flex justify-center">
+            <a
+              href="https://t.me/AlyonaRocket"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
+            >
+              Позвать на интервью →
+            </a>
           </div>
         </div>
       </section>
