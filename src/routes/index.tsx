@@ -327,6 +327,9 @@ function Resume() {
                 Видеовизитка ↓
               </a>
             </div>
+            <p className="mt-4 text-xs text-muted-foreground">
+              © Алёна Кунилова · Сделано с уважением к стилю Контура
+            </p>
           </div>
 
           <div className="flex flex-col items-center gap-0 shrink-0">
@@ -534,7 +537,7 @@ function Resume() {
       {/* Contacts */}
       <section id="contacts" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Контакты</SectionTitle>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <a
             href="mailto:salyona@gmail.com"
             className="group rounded-3xl border border-border bg-card p-6 transition-colors hover:border-primary"
@@ -562,15 +565,6 @@ function Resume() {
             <div className="text-sm text-muted-foreground">Telegram</div>
             <div className="mt-2 text-lg font-medium text-foreground group-hover:text-primary">
               @AlyonaRocket
-            </div>
-          </a>
-          <a
-            href="#video"
-            className="group rounded-3xl border border-[var(--kontur-orange)] bg-[var(--kontur-orange)]/15 p-6 transition-colors hover:bg-[var(--kontur-orange)]/25"
-          >
-            <div className="text-sm text-muted-foreground">Видео</div>
-            <div className="mt-2 text-lg font-medium text-foreground">
-              Видеовизитка ↓
             </div>
           </a>
         </div>
