@@ -292,10 +292,6 @@ function Resume() {
             {/* Mini facts */}
             <div className="flex flex-col gap-4">
               <div className="rounded-3xl border border-border bg-background p-6">
-                <div className="text-4xl font-bold tracking-tight">24+</div>
-                <div className="mt-2 text-sm text-muted-foreground">года в коммуникациях и медиа</div>
-              </div>
-              <div className="rounded-3xl border border-border bg-background p-6">
                 <div className="text-4xl font-bold tracking-tight">B2B · SaaS · AI</div>
                 <div className="mt-2 text-sm text-muted-foreground">PropTech, Gaming, Blockchain, Digital services, B2C</div>
               </div>
