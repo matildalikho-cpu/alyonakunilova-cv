@@ -589,7 +589,7 @@ function Resume() {
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <span>© 2026 Алёна Кунилова · Резюме для Контур.Толк</span>
-          <span>Сделано с уважением к стилю «Контура» ✦</span>
+          <span>Сделано с уважением к стилю Контура ✦</span>
         </div>
       </footer>
     </div>
