@@ -48,14 +48,14 @@ function LikeButton() {
   useEffect(() => {
     setMounted(true);
     const storedLiked = localStorage.getItem("alena-liked") === "1";
-    const storedCount = parseInt(localStorage.getItem("alena-likes") ?? "0", 10);
     setLiked(storedLiked);
-    setCount(isNaN(storedCount) ? 0 : storedCount);
+    setCount(storedLiked ? 1 : 0);
+    localStorage.setItem("alena-likes", storedLiked ? "1" : "0");
   }, []);
 
   const toggle = () => {
     const next = !liked;
-    const nextCount = count + (next ? 1 : -1);
+    const nextCount = next ? 1 : 0;
     setLiked(next);
     setCount(nextCount);
     localStorage.setItem("alena-liked", next ? "1" : "0");
