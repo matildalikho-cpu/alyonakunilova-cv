@@ -1,6 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Video, Heart } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { getLikesCount, addLike } from "@/lib/likes.functions";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+
 import alenaPhoto from "@/assets/profile-orange.png";
 import konturLogo from "@/assets/logo-kontur.png";
 
