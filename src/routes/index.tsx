@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Резюме Алёны Куниловой — контент-маркетолога с опытом в B2B, SaaS, AI, PropTech, Gaming и Blockchain. Отклик на вакансию в Контур.Толк.",
+          "Резюме Алёны Куниловой — контент-маркетолога с опытом в B2B, SaaS, AI, PropTech, Gaming, Blockchain, Digital services, B2C и медиа. Отклик на вакансию в Контур.Толк.",
       },
       { property: "og:title", content: "Алёна Кунилова — Контент-маркетолог в Толк, senior" },
       {
@@ -282,7 +282,7 @@ function Resume() {
             <div className="flex flex-col gap-4">
               <div className="rounded-3xl border border-border bg-background p-6">
                 <div className="text-4xl font-bold tracking-tight">B2B · SaaS · AI</div>
-                <div className="mt-2 text-sm text-muted-foreground">PropTech, Gaming, Blockchain, Digital services, B2C</div>
+                <div className="mt-2 text-sm text-muted-foreground">PropTech, Gaming, Blockchain, Digital services, B2C, медиа</div>
               </div>
               <div className="rounded-3xl border border-[var(--kontur-green)] bg-[var(--kontur-green)]/15 p-6">
                 <div className="text-sm font-medium uppercase tracking-wider text-foreground/70">Сейчас</div>
