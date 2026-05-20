@@ -267,7 +267,7 @@ function Resume() {
             <img
               src={alenaPhoto}
               alt="Алёна Кунилова"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </div>
         </div>
