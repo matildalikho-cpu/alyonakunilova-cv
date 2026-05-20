@@ -260,11 +260,11 @@ function Resume() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-[2rem] bg-[var(--kontur-orange)] md:h-80 md:w-80">
             <img
               src={alenaPhoto}
               alt="Алёна Кунилова"
-              className="relative z-10 h-64 w-64 rounded-full object-cover md:h-80 md:w-80"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
