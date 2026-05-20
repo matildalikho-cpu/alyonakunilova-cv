@@ -38,7 +38,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 type Job = {
   company: string;
-  meta?: string;
+  meta?: React.ReactNode;
   period: string;
   role: string;
   body: React.ReactNode;
@@ -47,7 +47,19 @@ type Job = {
 const jobs: Job[] = [
   {
     company: "Unitify",
-    meta: "SaaS для управления недвижимостью · unitify.com",
+    meta: (
+      <>
+        SaaS для управления недвижимостью ·{" "}
+        <a
+          href="https://unitify.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+        >
+          unitify.com
+        </a>
+      </>
+    ),
     period: "ноябрь 2025 — н.в.",
     role: "Marketing Executive",
     body: (
@@ -77,7 +89,19 @@ const jobs: Job[] = [
   },
   {
     company: "Ridero",
-    meta: "Издательская платформа · ridero.ru",
+    meta: (
+      <>
+        Издательская платформа ·{" "}
+        <a
+          href="https://ridero.ru/"
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+        >
+          ridero.ru
+        </a>
+      </>
+    ),
     period: "нояб. 2015 — окт. 2021",
     role: "PR-менеджер",
     body: (
@@ -146,8 +170,19 @@ const education = [
   { place: "ИМС, Екатеринбург", what: "Переводчик в сфере профессиональной коммуникации", note: "повышение квалификации" },
 ];
 
-const projects = [
-  "Редактор проекта «История Солидарности» — книга и сайт о комьюнити Екатеринбурга (2021)",
+const projects: React.ReactNode[] = [
+  <>
+    Редактор проекта{" "}
+    <a
+      href="https://xn--80ahlaacrtdbfqgfdien0v.xn--p1ai/"
+      target="_blank"
+      rel="noreferrer"
+      className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+    >
+      «История солидарности»
+    </a>{" "}
+    — книга и сайт о комьюнити Екатеринбурга (2021)
+  </>,
   "Редактор проекта «Код города» — книга о ДНК Екатеринбурга (2022)",
   "Редактор: Производственный центр Кончаловского, Музей истории Екатеринбурга (2021–2022)",
   "Участник сообщества «Екб_гуляем», автор городских прогулок и паблика «Улица Бажова»",
@@ -373,9 +408,9 @@ function Resume() {
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle>Проекты</SectionTitle>
           <ul className="space-y-4">
-            {projects.map((p) => (
+            {projects.map((p, i) => (
               <li
-                key={p}
+                key={i}
                 className="flex gap-4 rounded-2xl border border-border bg-background p-6 text-lg text-foreground/85"
               >
                 <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--kontur-green)]" />
