@@ -68,14 +68,7 @@ function ChatGPTPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border">
-        <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-5">
-          <Link to="/" className="flex items-center gap-3">
-            <span className="text-2xl font-bold tracking-tight">Контур</span>
-            <span className="hidden h-6 w-px bg-border sm:block" />
-            <span className="hidden text-base text-muted-foreground sm:block">
-              Работа у нас
-            </span>
-          </Link>
+        <div className="mx-auto flex max-w-4xl items-center justify-end px-6 py-5">
           <Link
             to="/"
             className="inline-flex items-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
