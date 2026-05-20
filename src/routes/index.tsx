@@ -157,19 +157,17 @@ function Resume() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
-      <header className="border-b border-border">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <div className="flex items-center gap-3">
-            <span className="text-2xl font-bold tracking-tight">Контур</span>
-            <span className="hidden h-6 w-px bg-border sm:block" />
-            <span className="hidden text-base text-muted-foreground sm:block">Работа у нас</span>
-          </div>
-          <Link
-            to="/chatgpt"
-            className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:opacity-90"
-          >
-            Что говорит ChatGPT →
-          </Link>
+      <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
+          <span className="text-2xl font-bold tracking-tight">Контур</span>
+          <nav className="hidden flex-1 items-center justify-center gap-6 text-sm text-muted-foreground lg:flex">
+            <a href="#about" className="transition-colors hover:text-foreground">О себе</a>
+            <a href="#experience" className="transition-colors hover:text-foreground">Опыт работы</a>
+            <a href="#skills" className="transition-colors hover:text-foreground">Навыки</a>
+            <a href="#education" className="transition-colors hover:text-foreground">Образование</a>
+            <a href="#projects" className="transition-colors hover:text-foreground">Проекты</a>
+            <a href="#motivation" className="transition-colors hover:text-foreground">Мотивация и рекомендации</a>
+          </nav>
         </div>
       </header>
 
@@ -220,7 +218,7 @@ function Resume() {
       </section>
 
       {/* About */}
-      <section className="bg-card">
+      <section id="about" className="scroll-mt-20 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle>О себе</SectionTitle>
           <div className="grid gap-10 md:grid-cols-2">
@@ -249,7 +247,7 @@ function Resume() {
       </section>
 
       {/* Experience */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section id="experience" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Опыт работы</SectionTitle>
         <div className="space-y-5">
           {jobs.map((job) => (
@@ -272,7 +270,7 @@ function Resume() {
       </section>
 
       {/* Skills */}
-      <section className="bg-card">
+      <section id="skills" className="scroll-mt-20 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle>Навыки</SectionTitle>
           <div className="grid gap-8 md:grid-cols-2">
@@ -291,7 +289,7 @@ function Resume() {
       </section>
 
       {/* Education */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section id="education" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Образование</SectionTitle>
         <div className="grid gap-5 md:grid-cols-2">
           {education.map((e) => (
@@ -305,7 +303,7 @@ function Resume() {
       </section>
 
       {/* Projects */}
-      <section className="bg-card">
+      <section id="projects" className="scroll-mt-20 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle>Проекты</SectionTitle>
           <ul className="space-y-4">
@@ -323,7 +321,7 @@ function Resume() {
       </section>
 
       {/* Motivation */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section id="motivation" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Мотивация и рекомендации</SectionTitle>
         <div className="rounded-3xl border border-border bg-card p-8 md:p-12">
           <p className="text-xl leading-relaxed text-foreground/90">
