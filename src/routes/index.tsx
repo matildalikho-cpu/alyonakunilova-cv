@@ -218,7 +218,7 @@ function Resume() {
       </section>
 
       {/* About */}
-      <section className="bg-card">
+      <section id="about" className="scroll-mt-20 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle>О себе</SectionTitle>
           <div className="grid gap-10 md:grid-cols-2">
@@ -247,7 +247,7 @@ function Resume() {
       </section>
 
       {/* Experience */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section id="experience" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Опыт работы</SectionTitle>
         <div className="space-y-5">
           {jobs.map((job) => (
@@ -270,7 +270,7 @@ function Resume() {
       </section>
 
       {/* Skills */}
-      <section className="bg-card">
+      <section id="skills" className="scroll-mt-20 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle>Навыки</SectionTitle>
           <div className="grid gap-8 md:grid-cols-2">
@@ -289,7 +289,7 @@ function Resume() {
       </section>
 
       {/* Education */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section id="education" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Образование</SectionTitle>
         <div className="grid gap-5 md:grid-cols-2">
           {education.map((e) => (
@@ -303,7 +303,7 @@ function Resume() {
       </section>
 
       {/* Projects */}
-      <section className="bg-card">
+      <section id="projects" className="scroll-mt-20 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle>Проекты</SectionTitle>
           <ul className="space-y-4">
@@ -321,7 +321,7 @@ function Resume() {
       </section>
 
       {/* Motivation */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section id="motivation" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Мотивация и рекомендации</SectionTitle>
         <div className="rounded-3xl border border-border bg-card p-8 md:p-12">
           <p className="text-xl leading-relaxed text-foreground/90">
