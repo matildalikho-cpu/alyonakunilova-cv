@@ -390,7 +390,7 @@ function Resume() {
             </div>
             <div className="rounded-3xl border border-border bg-background p-8">
               <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                Как работаю
+                Где и с кем я работала
               </div>
               <p className="text-lg leading-relaxed text-foreground/85">
                 В больших корпорациях, в стартапах и самостоятельно. С кросс-функциональными
