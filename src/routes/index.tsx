@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Video } from "lucide-react";
 import alenaPhoto from "@/assets/alena.png";
 import konturLogo from "@/assets/logo-kontur.png";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
