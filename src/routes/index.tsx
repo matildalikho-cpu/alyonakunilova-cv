@@ -307,12 +307,15 @@ function Resume() {
             </div>
           </div>
 
-          <div className="relative flex h-40 w-40 shrink-0 items-center justify-center overflow-hidden rounded-3xl bg-[var(--kontur-orange)] md:h-56 md:w-56">
-            <img
-              src={alenaPhoto}
-              alt="Алёна Кунилова"
-              className="h-full w-full object-cover"
-            />
+          <div className="flex flex-col items-center gap-0 shrink-0">
+            <div className="relative flex h-40 w-40 items-center justify-center overflow-hidden rounded-3xl bg-[var(--kontur-orange)] md:h-56 md:w-56">
+              <img
+                src={alenaPhoto}
+                alt="Алёна Кунилова"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <LikeButton />
           </div>
         </div>
       </section>
