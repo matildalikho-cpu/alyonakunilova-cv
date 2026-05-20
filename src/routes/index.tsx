@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Video } from "lucide-react";
+import { Video, Heart } from "lucide-react";
+import { useEffect, useState } from "react";
 import alenaPhoto from "@/assets/profile-orange.png";
 import konturLogo from "@/assets/logo-kontur.png";
 
@@ -36,6 +37,49 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
     <h2 className="mb-8 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
       {children}
     </h2>
+  );
+}
+
+function LikeButton() {
+  const [mounted, setMounted] = useState(false);
+  const [liked, setLiked] = useState(false);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setMounted(true);
+    const storedLiked = localStorage.getItem("alena-liked") === "1";
+    const storedCount = parseInt(localStorage.getItem("alena-likes") ?? "127", 10);
+    setLiked(storedLiked);
+    setCount(isNaN(storedCount) ? 127 : storedCount);
+  }, []);
+
+  const toggle = () => {
+    const next = !liked;
+    const nextCount = count + (next ? 1 : -1);
+    setLiked(next);
+    setCount(nextCount);
+    localStorage.setItem("alena-liked", next ? "1" : "0");
+    localStorage.setItem("alena-likes", String(nextCount));
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      aria-pressed={liked}
+      aria-label={liked ? "Убрать лайк" : "Поставить лайк"}
+      className={`mt-3 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all active:scale-95 ${
+        liked
+          ? "border-[var(--kontur-orange)] bg-[var(--kontur-orange)]/15 text-foreground"
+          : "border-border bg-background text-foreground hover:bg-accent"
+      }`}
+    >
+      <Heart
+        size={18}
+        className={liked ? "fill-[var(--kontur-orange)] text-[var(--kontur-orange)]" : ""}
+      />
+      <span className="tabular-nums">{mounted ? count : ""}</span>
+    </button>
   );
 }
 
@@ -263,12 +307,15 @@ function Resume() {
             </div>
           </div>
 
-          <div className="relative flex h-40 w-40 shrink-0 items-center justify-center overflow-hidden rounded-3xl bg-[var(--kontur-orange)] md:h-56 md:w-56">
-            <img
-              src={alenaPhoto}
-              alt="Алёна Кунилова"
-              className="h-full w-full object-cover"
-            />
+          <div className="flex flex-col items-center gap-0 shrink-0">
+            <div className="relative flex h-40 w-40 items-center justify-center overflow-hidden rounded-3xl bg-[var(--kontur-orange)] md:h-56 md:w-56">
+              <img
+                src={alenaPhoto}
+                alt="Алёна Кунилова"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <LikeButton />
           </div>
         </div>
       </section>
