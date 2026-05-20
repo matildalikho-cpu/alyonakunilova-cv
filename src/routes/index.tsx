@@ -231,8 +231,8 @@ function Resume() {
       </header>
 
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 pt-12 pb-20 md:pt-20">
-        <div className="mb-8 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+      <section className="mx-auto max-w-6xl px-6 pt-8 pb-12 md:pt-12 md:pb-16">
+        <div className="mb-6 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
           <span>Резюме</span>
           <span>→</span>
           <span>Маркетинг</span>
@@ -240,17 +240,17 @@ function Resume() {
           <span className="text-foreground">Контент-маркетолог в Толк, senior</span>
         </div>
 
-        <div className="grid gap-10 md:grid-cols-[1fr_auto] md:gap-16">
-          <div>
-            <h1 className="text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
+        <div className="flex flex-col-reverse items-start gap-6 md:flex-row md:items-center md:gap-10">
+          <div className="flex-1">
+            <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl">
               Алёна Кунилова
             </h1>
-            <p className="mt-6 text-2xl text-muted-foreground md:text-3xl">
+            <p className="mt-4 text-xl text-muted-foreground md:text-2xl">
               Контент-маркетолог в Толк, <span className="text-foreground">senior</span>
             </p>
           </div>
 
-          <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-[2rem] bg-[var(--kontur-orange)] md:h-80 md:w-80">
+          <div className="relative flex h-40 w-40 shrink-0 items-center justify-center overflow-hidden rounded-3xl bg-[var(--kontur-orange)] md:h-56 md:w-56">
             <img
               src={alenaPhoto}
               alt="Алёна Кунилова"
