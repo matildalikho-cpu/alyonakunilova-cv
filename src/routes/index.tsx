@@ -456,6 +456,11 @@ function Resume() {
               <div className="mt-4 text-base leading-relaxed">{job.body}</div>
             </article>
           ))}
+          <div className="rounded-3xl border border-border bg-background p-8 md:p-10">
+            <p className="text-base leading-relaxed text-muted-foreground">
+              Ранее — репортёр «Коммерсантъ-Урал», копирайтер в бюро паблисити и PR «КБ-32».
+            </p>
+          </div>
         </div>
       </section>
 
