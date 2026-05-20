@@ -360,16 +360,14 @@ function ChatGPTPage() {
 
 
         <p className="mt-10 text-center text-sm text-muted-foreground">
-          Пруф —{" "}
           <a
             href="https://chatgpt.com/share/6a0dae10-9580-83eb-ae3d-7efa22f0f05a"
             target="_blank"
             rel="noreferrer"
             className="underline underline-offset-4 hover:text-foreground"
           >
-            оригинальный чат с ChatGPT
+            Оригинальный чат с ChatGPT
           </a>
-          .
         </p>
 
         <div className="mt-8 flex justify-center">
