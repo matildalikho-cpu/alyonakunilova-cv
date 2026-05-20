@@ -14,7 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      likes: {
+        Row: {
+          created_at: string
+          fingerprint: string | null
+          id: string
+          user_agent: string | null
+        }
+        Insert: {
+          created_at?: string
+          fingerprint?: string | null
+          id?: string
+          user_agent?: string | null
+        }
+        Update: {
+          created_at?: string
+          fingerprint?: string | null
+          id?: string
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
