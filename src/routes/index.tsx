@@ -343,7 +343,7 @@ function Resume() {
                 <Video className="h-6 w-6 shrink-0" strokeWidth={2.2} />
                 <p className="text-base">
                   И да — для созвонов внутри команды мы сейчас используем именно{" "}
-                  <span className="font-semibold">«Толк»</span>.
+                  <span className="font-semibold">Толк</span>.
                 </p>
               </div>
             </div>
