@@ -223,6 +223,7 @@ function Resume() {
             <a href="#education" className="transition-colors hover:text-foreground">Образование</a>
             <a href="#projects" className="transition-colors hover:text-foreground">Проекты</a>
             <a href="#motivation" className="transition-colors hover:text-foreground">Мотивация и рекомендации</a>
+            <a href="#contacts" className="transition-colors hover:text-foreground">Контакты</a>
           </nav>
         </div>
       </header>
