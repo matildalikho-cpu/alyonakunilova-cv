@@ -584,6 +584,7 @@ function Resume() {
           <div className="overflow-hidden rounded-3xl border border-border bg-background">
             <video
               src="/video-vizitka.mp4"
+              poster="/video-poster.jpg"
               controls
               playsInline
               preload="metadata"
