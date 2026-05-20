@@ -504,7 +504,7 @@ function Resume() {
             to="/chatgpt"
             className="mt-8 inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
           >
-            Прочитать рассказ ChatGPT →
+            Что думает обо мне ChatGPT →
           </Link>
         </div>
       </section>
