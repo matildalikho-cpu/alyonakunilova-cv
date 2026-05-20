@@ -457,7 +457,7 @@ function Resume() {
       {/* Contacts */}
       <section id="contacts" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Контакты</SectionTitle>
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <a
             href="mailto:salyona@gmail.com"
             className="group rounded-3xl border border-border bg-card p-6 transition-colors hover:border-primary"
@@ -487,6 +487,30 @@ function Resume() {
               @AlyonaRocket
             </div>
           </a>
+          <a
+            href="#video"
+            className="group rounded-3xl border border-[var(--kontur-orange)] bg-[var(--kontur-orange)]/15 p-6 transition-colors hover:bg-[var(--kontur-orange)]/25"
+          >
+            <div className="text-sm text-muted-foreground">Видео</div>
+            <div className="mt-2 text-lg font-medium text-foreground">
+              Видеовизитка ↓
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="video" className="scroll-mt-20 bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <SectionTitle>Видеовизитка</SectionTitle>
+          <div className="overflow-hidden rounded-3xl border border-border bg-background">
+            <video
+              src="/video-vizitka.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              className="h-auto w-full"
+            />
+          </div>
         </div>
       </section>
 
