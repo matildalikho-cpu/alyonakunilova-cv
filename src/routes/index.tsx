@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Video } from "lucide-react";
+import { Video, Heart } from "lucide-react";
+import { useEffect, useState } from "react";
 import alenaPhoto from "@/assets/profile-orange.png";
 import konturLogo from "@/assets/logo-kontur.png";
 
