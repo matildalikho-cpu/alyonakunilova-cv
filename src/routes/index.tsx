@@ -314,7 +314,7 @@ function Resume() {
               </div>
               <p className="text-lg leading-relaxed text-foreground/85">
                 Свою карьеру начинала как копирайтер и журналист деловых изданий — отсюда
-                привычка слышать тон, искать факт и собирать смысл из шума.
+                привычка слышать тон, проверять факты и находить смыслы.
               </p>
             </div>
             <div className="rounded-3xl border border-border bg-background p-8">
