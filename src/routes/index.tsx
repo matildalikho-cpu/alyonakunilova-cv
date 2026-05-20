@@ -1,6 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Video, Heart } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { getLikesCount, addLike } from "@/lib/likes.functions";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+
 import alenaPhoto from "@/assets/profile-orange.png";
 import konturLogo from "@/assets/logo-kontur.png";
 
@@ -42,46 +46,66 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 function LikeButton() {
   const [mounted, setMounted] = useState(false);
-  const [liked, setLiked] = useState(false);
-  const [count, setCount] = useState(0);
+  const [isLiking, setIsLiking] = useState(false);
+  const queryClient = useQueryClient();
+  const fetchCount = useServerFn(getLikesCount);
+  const submitLike = useServerFn(addLike);
+
+  const { data: count = 0 } = useQuery({
+    queryKey: ["likes-count"],
+    queryFn: () => fetchCount(),
+    enabled: mounted,
+  });
+
+  const [hasLikedLocally, setHasLikedLocally] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    const storedLiked = localStorage.getItem("alena-liked") === "1";
-    setLiked(storedLiked);
-    setCount(storedLiked ? 1 : 0);
-    localStorage.setItem("alena-likes", storedLiked ? "1" : "0");
+    setHasLikedLocally(localStorage.getItem("alena-liked-global") === "1");
   }, []);
 
-  const toggle = () => {
-    const next = !liked;
-    const nextCount = next ? 1 : 0;
-    setLiked(next);
-    setCount(nextCount);
-    localStorage.setItem("alena-liked", next ? "1" : "0");
-    localStorage.setItem("alena-likes", String(nextCount));
+  const toggle = async () => {
+    if (hasLikedLocally || isLiking) return;
+
+    setIsLiking(true);
+    try {
+      await submitLike({
+        data: {
+          userAgent: window.navigator.userAgent,
+        },
+      });
+      localStorage.setItem("alena-liked-global", "1");
+      setHasLikedLocally(true);
+      queryClient.invalidateQueries({ queryKey: ["likes-count"] });
+    } catch (err) {
+      console.error("Error submitting like:", err);
+    } finally {
+      setIsLiking(false);
+    }
   };
 
   return (
     <button
       type="button"
       onClick={toggle}
-      aria-pressed={liked}
-      aria-label={liked ? "Убрать лайк" : "Поставить лайк"}
-      className={`mt-3 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all active:scale-95 ${
-        liked
+      disabled={hasLikedLocally || isLiking}
+      aria-pressed={hasLikedLocally}
+      aria-label={hasLikedLocally ? "Вы уже поставили лайк" : "Поставить лайк"}
+      className={`mt-3 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all active:scale-95 disabled:cursor-default ${
+        hasLikedLocally
           ? "border-[var(--kontur-orange)] bg-[var(--kontur-orange)]/15 text-foreground"
           : "border-border bg-background text-foreground hover:bg-accent"
       }`}
     >
       <Heart
         size={18}
-        className={liked ? "fill-[var(--kontur-orange)] text-[var(--kontur-orange)]" : ""}
+        className={hasLikedLocally || isLiking ? "fill-[var(--kontur-orange)] text-[var(--kontur-orange)]" : ""}
       />
       <span className="tabular-nums">{mounted ? count : ""}</span>
     </button>
   );
 }
+
 
 type Job = {
   company: string;
