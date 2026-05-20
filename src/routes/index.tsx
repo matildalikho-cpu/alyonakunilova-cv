@@ -44,12 +44,25 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   );
 }
 
+function getFingerprint(): string {
+  const KEY = "alena-like-fp";
+  let fp = localStorage.getItem(KEY);
+  if (!fp) {
+    fp = (crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`);
+    localStorage.setItem(KEY, fp);
+  }
+  return fp;
+}
+
 function LikeButton() {
   const [mounted, setMounted] = useState(false);
   const [isLiking, setIsLiking] = useState(false);
+  const [liked, setLiked] = useState(false);
+  const [fingerprint, setFingerprint] = useState<string | null>(null);
   const queryClient = useQueryClient();
   const fetchCount = useServerFn(getLikesCount);
-  const submitLike = useServerFn(addLike);
+  const checkLiked = useServerFn(hasLiked);
+  const submitToggle = useServerFn(toggleLike);
 
   const { data: count = 0 } = useQuery({
     queryKey: ["likes-count"],
@@ -57,28 +70,30 @@ function LikeButton() {
     enabled: mounted,
   });
 
-  const [hasLikedLocally, setHasLikedLocally] = useState(false);
-
   useEffect(() => {
     setMounted(true);
-    setHasLikedLocally(localStorage.getItem("alena-liked-global") === "1");
-  }, []);
+    const fp = getFingerprint();
+    setFingerprint(fp);
+    checkLiked({ data: { fingerprint: fp } })
+      .then(setLiked)
+      .catch((err) => console.error("Error checking like:", err));
+  }, [checkLiked]);
 
   const toggle = async () => {
-    if (hasLikedLocally || isLiking) return;
+    if (isLiking || !fingerprint) return;
 
     setIsLiking(true);
     try {
-      await submitLike({
+      const res = await submitToggle({
         data: {
+          fingerprint,
           userAgent: window.navigator.userAgent,
         },
       });
-      localStorage.setItem("alena-liked-global", "1");
-      setHasLikedLocally(true);
+      setLiked(res.liked);
       queryClient.invalidateQueries({ queryKey: ["likes-count"] });
     } catch (err) {
-      console.error("Error submitting like:", err);
+      console.error("Error toggling like:", err);
     } finally {
       setIsLiking(false);
     }
@@ -88,18 +103,18 @@ function LikeButton() {
     <button
       type="button"
       onClick={toggle}
-      disabled={hasLikedLocally || isLiking}
-      aria-pressed={hasLikedLocally}
-      aria-label={hasLikedLocally ? "Вы уже поставили лайк" : "Поставить лайк"}
+      disabled={isLiking || !mounted}
+      aria-pressed={liked}
+      aria-label={liked ? "Убрать лайк" : "Поставить лайк"}
       className={`mt-3 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all active:scale-95 disabled:cursor-default ${
-        hasLikedLocally
+        liked
           ? "border-[var(--kontur-orange)] bg-[var(--kontur-orange)]/15 text-foreground"
           : "border-border bg-background text-foreground hover:bg-accent"
       }`}
     >
       <Heart
         size={18}
-        className={hasLikedLocally || isLiking ? "fill-[var(--kontur-orange)] text-[var(--kontur-orange)]" : ""}
+        className={liked ? "fill-[var(--kontur-orange)] text-[var(--kontur-orange)]" : ""}
       />
       <span className="tabular-nums">{mounted ? count : ""}</span>
     </button>
