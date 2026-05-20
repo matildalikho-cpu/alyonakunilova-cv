@@ -408,9 +408,9 @@ function Resume() {
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle>Проекты</SectionTitle>
           <ul className="space-y-4">
-            {projects.map((p) => (
+            {projects.map((p, i) => (
               <li
-                key={p}
+                key={i}
                 className="flex gap-4 rounded-2xl border border-border bg-background p-6 text-lg text-foreground/85"
               >
                 <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--kontur-green)]" />
