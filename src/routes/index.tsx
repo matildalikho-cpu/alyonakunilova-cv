@@ -208,7 +208,7 @@ const jobs: Job[] = [
     ),
   },
   {
-    company: "Honeymoon Travel",
+    company: "Honeymoon",
     meta: "Свадьбы за границей",
     period: "июль 2010 — дек. 2014",
     role: "Сооснователь · директор по маркетингу",
