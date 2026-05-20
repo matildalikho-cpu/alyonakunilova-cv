@@ -221,29 +221,93 @@ function Resume() {
       <section id="about" className="scroll-mt-20 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle>О себе</SectionTitle>
-          <div className="grid gap-10 md:grid-cols-2">
-            <p className="text-lg leading-relaxed text-foreground/85">
-              Помогаю сложным продуктам говорить с аудиторией на понятном языке — без официоза,
-              штампов и абстракций: объясняю, пишу, редактирую, упаковываю, помогаю команде
-              доносить идеи через тексты во всех возможных форматах.
-            </p>
-            <p className="text-lg leading-relaxed text-foreground/85">
-              Свою карьеру начинала как копирайтер и журналист деловых изданий.
-            </p>
-            <p className="text-lg leading-relaxed text-foreground/85">
-              Работала в больших корпорациях, в стартапах и самостоятельно; с кросс-функциональными
-              командами и сторонними подрядчиками, разработчиками и креативными специалистами,
-              топ-менеджерами и фаундерами. Со всеми нахожу общий язык, легко осваиваю новый
-              контекст. Люблю интеллектуальные задачи, где нужно быстро разобраться в теме и
-              превратить хаос в систему.
-            </p>
-            <p className="md:col-span-2 text-lg leading-relaxed text-foreground/85">
-              Сейчас работаю соло-маркетологом в команде международной платформы для управдомов
-              и управляющих компаний: контент для блога и соцсетей, презентационные материалы,
-              лидогенерация, ивенты, скрипты для продаж и коммерческие предложения. Активно
-              использую AI-инструменты в работе. И да — для созвонов внутри команды мы сейчас
-              используем именно <span className="font-semibold text-foreground">«Толк»</span>.
-            </p>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {/* Lead quote */}
+            <div className="rounded-3xl border border-border bg-background p-8 md:p-10 lg:col-span-2">
+              <p className="text-2xl font-medium leading-snug tracking-tight text-foreground md:text-3xl">
+                Помогаю сложным продуктам говорить с аудиторией на понятном языке — без
+                официоза, штампов и абстракций.
+              </p>
+              <p className="mt-6 text-lg leading-relaxed text-foreground/75">
+                Объясняю, пишу, редактирую, упаковываю и помогаю команде доносить идеи через
+                тексты во всех возможных форматах.
+              </p>
+            </div>
+
+            {/* Mini facts */}
+            <div className="flex flex-col gap-4">
+              <div className="rounded-3xl border border-border bg-background p-6">
+                <div className="text-4xl font-bold tracking-tight">24+</div>
+                <div className="mt-2 text-sm text-muted-foreground">года в коммуникациях и медиа</div>
+              </div>
+              <div className="rounded-3xl border border-border bg-background p-6">
+                <div className="text-4xl font-bold tracking-tight">B2B · SaaS · AI</div>
+                <div className="mt-2 text-sm text-muted-foreground">PropTech, Gaming, Blockchain, Digital services, B2C</div>
+              </div>
+              <div className="rounded-3xl border border-[var(--kontur-green)] bg-[var(--kontur-green)]/15 p-6">
+                <div className="text-sm font-medium uppercase tracking-wider text-foreground/70">Сейчас</div>
+                <div className="mt-2 text-lg font-semibold">
+                  Соло-маркетолог в международной PropTech-платформе
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Origin + path */}
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl border border-border bg-background p-8">
+              <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">
+                Откуда я
+              </div>
+              <p className="text-lg leading-relaxed text-foreground/85">
+                Свою карьеру начинала как копирайтер и журналист деловых изданий — отсюда
+                привычка слышать тон, искать факт и собирать смысл из шума.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-border bg-background p-8">
+              <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">
+                Как работаю
+              </div>
+              <p className="text-lg leading-relaxed text-foreground/85">
+                В больших корпорациях, в стартапах и самостоятельно. С кросс-функциональными
+                командами, подрядчиками, разработчиками, топ-менеджерами и фаундерами — со
+                всеми нахожу общий язык и легко осваиваю новый контекст.
+              </p>
+            </div>
+          </div>
+
+          {/* What I love + current role */}
+          <div className="mt-6 grid gap-6 md:grid-cols-5">
+            <div className="rounded-3xl border border-border bg-background p-8 md:col-span-2">
+              <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">
+                Что люблю
+              </div>
+              <p className="text-lg leading-relaxed text-foreground/85">
+                Интеллектуальные задачи, где нужно быстро разобраться в теме и превратить хаос
+                в систему. Комфортна как работа с конкретной зоной ответственности, так и
+                многозадачные роли.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-border bg-background p-8 md:col-span-3">
+              <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">
+                Сегодня
+              </div>
+              <p className="text-lg leading-relaxed text-foreground/85">
+                Соло-маркетолог в команде международной платформы для управдомов и
+                управляющих компаний. Отвечаю за маркетинговые коммуникации: контент для блога
+                и соцсетей, презентационные материалы, лидогенерацию, ивенты, скрипты для
+                продаж и коммерческие предложения. Активно использую AI-инструменты в работе —
+                для текстов, изображений, видео, дизайна, лендингов.
+              </p>
+              <div className="mt-6 flex items-center gap-3 rounded-2xl bg-foreground px-5 py-4 text-background">
+                <span className="text-2xl">💬</span>
+                <p className="text-base">
+                  И да — для созвонов внутри команды мы сейчас используем именно{" "}
+                  <span className="font-semibold">«Толк»</span>.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
