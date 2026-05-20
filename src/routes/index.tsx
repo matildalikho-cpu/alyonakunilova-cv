@@ -303,8 +303,6 @@ function Resume() {
           <span>Резюме</span>
           <span>→</span>
           <span>Маркетинг</span>
-          <span>→</span>
-          <span className="text-foreground">Контент-маркетолог в Толк, senior</span>
         </div>
 
         <div className="flex flex-col-reverse items-start gap-6 md:flex-row md:items-center md:gap-10">
