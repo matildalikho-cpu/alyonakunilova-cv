@@ -160,7 +160,7 @@ const jobs: Job[] = [
         </a>
       </>
     ),
-    period: "ноябрь 2025 — н.в.",
+    period: "нояб. 2025 — н.в.",
     role: "Marketing Executive",
     body: (
       <>
