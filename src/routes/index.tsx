@@ -179,7 +179,7 @@ const jobs: Job[] = [
           <li>— Ведение корпоративных соцсетей и <a href="https://unitify.com/en/blog" target="_blank" rel="noreferrer" className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground">блога</a>: контент-план, публикации и развитие <a href="https://www.linkedin.com/company/unitifyandmanage/" target="_blank" rel="noreferrer" className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground">LinkedIn-страницы</a> — органический рост с 10 до 170+ подписчиков за 2 месяца.</li>
           <li>— Подготовка контента и коммуникации для B2B-партнёров и медиа (RU/EN): презентации, рекламные материалы, адаптация и переводы.</li>
           <li>— Организация участия в отраслевых мероприятиях, включая MOVE Summit 2026 (Ташкент) и MIPIM 2026 (Канны).</li>
-          <li>— Сопровождение переговоров фаундера: follow-up, координация договорённостей и партнёрских процессов.</li>
+          <li>— Сопровождение переговоров фаундера: follow-up коммуникация, координация договорённостей и партнёрских процессов.</li>
         </ul>
       </>
     ),
