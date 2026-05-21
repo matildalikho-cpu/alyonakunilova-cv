@@ -572,18 +572,18 @@ function Resume() {
           {/* Collage */}
           <div className="mb-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
             {[
-              { src: projectSolidarnost, alt: "«История солидарности» — книга", className: "aspect-[3/4] md:row-span-2 md:aspect-[3/5]" },
-              { src: projectKodGoroda, alt: "«Код города. Екатеринбург» — книга", className: "aspect-square" },
-              { src: projectEkbwalkYard, alt: "Прогулка во дворе с Екб_гуляем", className: "aspect-square" },
-              { src: projectMampochitaiPoster, alt: "Афиша подкаста «Мам, почитай»", className: "aspect-[3/4] md:row-span-2 md:aspect-[3/5]" },
-              { src: projectMuseumPhoto, alt: "Музей истории Екатеринбурга", className: "aspect-square" },
-              { src: projectEkbwalkCrowd, alt: "Экскурсия Екб_гуляем", className: "aspect-square" },
-              { src: projectKonchalovskyPortrait, alt: "Портрет — проект для Продюсерского центра Кончаловского", className: "aspect-[4/3] md:col-span-2" },
-              { src: projectMampochitaiBooks, alt: "Книги подкаста «Мам, почитай»", className: "aspect-[4/3] md:col-span-2" },
+              { src: projectSolidarnost, alt: "«История солидарности» — книга" },
+              { src: projectKodGoroda, alt: "«Код города. Екатеринбург» — книга" },
+              { src: projectMampochitaiPoster, alt: "Афиша подкаста «Мам, почитай»" },
+              { src: projectMampochitaiBooks, alt: "Книги подкаста «Мам, почитай»" },
+              { src: projectEkbwalkYard, alt: "Прогулка во дворе с Екб_гуляем" },
+              { src: projectEkbwalkCrowd, alt: "Экскурсия Екб_гуляем" },
+              { src: projectKonchalovskyPortrait, alt: "Портрет — проект для Продюсерского центра Кончаловского" },
+              { src: projectMuseumPhoto, alt: "Музей истории Екатеринбурга" },
             ].map((img, i) => (
               <div
                 key={i}
-                className={`overflow-hidden rounded-2xl border border-border bg-background ${img.className}`}
+                className="aspect-square overflow-hidden rounded-2xl border border-border bg-background"
               >
                 <img
                   src={img.src}
