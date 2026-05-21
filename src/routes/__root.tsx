@@ -78,12 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Контент-маркетолог в Толк" },
       { property: "og:description", content: "Специалист по маркетинговым коммуникациям с опытом в B2B, SaaS, AI, PropTech, Gaming, Blockchain, Digital services, B2C, Media" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Контент-маркетолог в Толк" },
       { name: "twitter:description", content: "Специалист по маркетинговым коммуникациям с опытом в B2B, SaaS, AI, PropTech, Gaming, Blockchain, Digital services, B2C, Media" },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ebeb7419-a27d-4ef9-9b81-f9396cde7d61" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ebeb7419-a27d-4ef9-9b81-f9396cde7d61" },
+      { property: "og:image", content: "https://alyona-for-talk.lovable.app/og-banner.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:image", content: "https://alyona-for-talk.lovable.app/og-banner.jpg" },
     ],
     links: [
       {
