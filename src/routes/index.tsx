@@ -7,7 +7,6 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 import alenaPhoto from "@/assets/profile-orange.png";
 import konturLogo from "@/assets/logo-kontur.png";
-import solidarityCover from "@/assets/istoria-solidarnosti.jpg";
 
 
 export const Route = createFileRoute("/")({
@@ -281,26 +280,16 @@ const education = [
 
 const projects: React.ReactNode[] = [
   <>
-    <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-      <img
-        src={solidarityCover}
-        alt="Обложка книги «История солидарности»"
-        className="h-40 w-auto shrink-0 rounded-lg border border-border object-cover shadow-sm"
-        loading="lazy"
-      />
-      <span>
-        Редактор проекта{" "}
-        <a
-          href="https://xn--80ahlaacrtdbfqgfdien0v.xn--p1ai/"
-          target="_blank"
-          rel="noreferrer"
-          className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
-        >
-          «История солидарности»
-        </a>{" "}
-        — книга и сайт о комьюнити Екатеринбурга (2021)
-      </span>
-    </div>
+    Редактор проекта{" "}
+    <a
+      href="https://xn--80ahlaacrtdbfqgfdien0v.xn--p1ai/"
+      target="_blank"
+      rel="noreferrer"
+      className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+    >
+      «История солидарности»
+    </a>{" "}
+    — книга и сайт о комьюнити Екатеринбурга (2021)
   </>,
   "Редактор проекта «Код города» — книга о ДНК Екатеринбурга (2022)",
   "Редактор: Продюсерский центр Андрея Кончаловского, Музей истории Екатеринбурга (2021–2022)",
