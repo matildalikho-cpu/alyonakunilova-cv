@@ -82,6 +82,15 @@ function LikeButton() {
   const toggle = async () => {
     if (isLiking || !fingerprint) return;
 
+    const prevLiked = liked;
+    const nextLiked = !prevLiked;
+
+    // Optimistic update
+    setLiked(nextLiked);
+    queryClient.setQueryData<number>(["likes-count"], (old = 0) =>
+      Math.max(0, old + (nextLiked ? 1 : -1))
+    );
+
     setIsLiking(true);
     try {
       const res = await submitToggle({
@@ -94,6 +103,11 @@ function LikeButton() {
       queryClient.invalidateQueries({ queryKey: ["likes-count"] });
     } catch (err) {
       console.error("Error toggling like:", err);
+      // Rollback
+      setLiked(prevLiked);
+      queryClient.setQueryData<number>(["likes-count"], (old = 0) =>
+        Math.max(0, old + (nextLiked ? -1 : 1))
+      );
     } finally {
       setIsLiking(false);
     }
