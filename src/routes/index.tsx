@@ -288,6 +288,18 @@ const education = [
 
 const projects: React.ReactNode[] = [
   <>
+    Куратор: Музей истории Екатеринбурга (проект{" "}
+    <a
+      href="https://youtu.be/72W1vbg3erE"
+      target="_blank"
+      rel="noreferrer"
+      className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+    >
+      «Лаборатория воспоминаний»
+    </a>
+    ) (2019–2022)
+  </>,
+  <>
     Редактор проекта{" "}
     <a
       href="https://xn--80ahlaacrtdbfqgfdien0v.xn--p1ai/"
@@ -311,7 +323,6 @@ const projects: React.ReactNode[] = [
     </a>{" "}
     (2021 – 2022)
   </>,
-  "Редактор проекта «Код города» — книга о ДНК Екатеринбурга (2022)",
   <>
     Редактор: Продюсерский центр Андрея Кончаловского (проект{" "}
     <a
@@ -324,18 +335,7 @@ const projects: React.ReactNode[] = [
     </a>
     ) (2021)
   </>,
-  <>
-    Продюсер: Музей истории Екатеринбурга (проект{" "}
-    <a
-      href="https://youtu.be/72W1vbg3erE"
-      target="_blank"
-      rel="noreferrer"
-      className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
-    >
-      «Лаборатория воспоминаний»
-    </a>
-    ) (2019–2022)
-  </>,
+  "Редактор проекта «Код города» — книга о ДНК Екатеринбурга (2022)",
   <>
     Участник сообщества{" "}
     <a
