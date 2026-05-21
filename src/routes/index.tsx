@@ -359,6 +359,14 @@ function Resume() {
             <a href="#education" className="transition-colors hover:text-foreground">Образование</a>
             <a href="#projects" className="transition-colors hover:text-foreground">Проекты</a>
             <a href="#motivation" className="transition-colors hover:text-foreground">Мотивация и рекомендации</a>
+            <button
+              type="button"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1 transition-colors hover:text-foreground hover:bg-accent"
+              aria-label="Наверх резюме"
+            >
+              ↑ Наверх
+            </button>
           </nav>
         </div>
       </header>
