@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/chatgpt")({
   head: () => ({
     meta: [
-      { title: "Что говорит про меня ChatGPT — Алёна Кунилова" },
+      { title: "Что думает обо мне ChatGPT — Алёна Кунилова" },
       {
         name: "description",
         content:
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/chatgpt")({
       },
       {
         property: "og:title",
-        content: "Что говорит про меня ChatGPT — Алёна Кунилова",
+        content: "Что думает обо мне ChatGPT — Алёна Кунилова",
       },
       {
         property: "og:description",
@@ -88,7 +88,7 @@ function ChatGPTPage() {
         </div>
 
         <h1 className="text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl">
-          Что говорит про меня ChatGPT
+          Что думает обо мне ChatGPT
         </h1>
         <p className="mt-6 max-w-2xl text-xl text-muted-foreground">
           Я попросила ChatGPT, с которым мы ежедневно работаем над проектами,
