@@ -7,6 +7,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 import alenaPhoto from "@/assets/profile-orange.png";
 import konturLogo from "@/assets/logo-kontur.png";
+import solidarityCover from "@/assets/istoria-solidarnosti.jpg";
 
 
 export const Route = createFileRoute("/")({
