@@ -291,6 +291,18 @@ const projects: React.ReactNode[] = [
     </a>{" "}
     — книга и сайт о комьюнити Екатеринбурга (2021)
   </>,
+  <>
+    Менеджер по рекламным интеграциям и партнёрствам: подкаст{" "}
+    <a
+      href="https://www.instagram.com/podcastmampochitai/"
+      target="_blank"
+      rel="noreferrer"
+      className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+    >
+      «Мам, почитай»
+    </a>{" "}
+    (2021 – 2022)
+  </>,
   "Редактор проекта «Код города» — книга о ДНК Екатеринбурга (2022)",
   "Редактор: Продюсерский центр Андрея Кончаловского, Музей истории Екатеринбурга (2021–2022)",
   <>
