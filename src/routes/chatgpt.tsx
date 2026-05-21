@@ -84,7 +84,7 @@ function ChatGPTPage() {
             Резюме
           </Link>
           <span>→</span>
-          <span className="text-foreground">Что говорит ChatGPT</span>
+          <span className="text-foreground">Что думает ChatGPT</span>
         </div>
 
         <h1 className="text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl">
@@ -92,7 +92,7 @@ function ChatGPTPage() {
         </h1>
         <p className="mt-6 max-w-2xl text-xl text-muted-foreground">
           Я попросила ChatGPT, с которым мы ежедневно работаем над проектами,
-          рассказать про меня подробнее — как про специалиста и человека. Ниже —
+          рассказать обо мне подробнее — как про специалиста и человека. Ниже —
           его ответ, без редактуры.
         </p>
 
