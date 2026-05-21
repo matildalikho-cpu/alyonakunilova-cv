@@ -82,10 +82,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Контент-маркетолог в Толк" },
       { name: "twitter:description", content: "Специалист по маркетинговым коммуникациям с опытом в B2B, SaaS, AI, PropTech, Gaming, Blockchain, Digital services, B2C, Media" },
-      { property: "og:image", content: "https://alyona-for-talk.lovable.app/og-banner.jpg" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/1kAvac4t2kd2O6sk0WVnmTOo4rh2/social-images/social-1779358017023-og-banner.webp" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { name: "twitter:image", content: "https://alyona-for-talk.lovable.app/og-banner.jpg" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/1kAvac4t2kd2O6sk0WVnmTOo4rh2/social-images/social-1779358017023-og-banner.webp" },
     ],
     links: [
       {
