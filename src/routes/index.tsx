@@ -288,7 +288,7 @@ const education = [
 
 const projects: React.ReactNode[] = [
   <>
-    Куратор: Музей истории Екатеринбурга (проект{" "}
+    Куратор/Продюсер/Лектор: Музей истории Екатеринбурга (проект{" "}
     <a
       href="https://youtu.be/72W1vbg3erE"
       target="_blank"
