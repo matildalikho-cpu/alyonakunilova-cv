@@ -7,6 +7,14 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 import alenaPhoto from "@/assets/profile-orange.png";
 import konturLogo from "@/assets/logo-kontur.png";
+import projectKodGoroda from "@/assets/project-kod-goroda.jpg";
+import projectSolidarnost from "@/assets/project-solidarnost.jpg";
+import projectMampochitaiPoster from "@/assets/project-mampochitai-poster.jpg";
+import projectMampochitaiBooks from "@/assets/project-mampochitai-books.jpg";
+import projectEkbwalkYard from "@/assets/project-ekbwalk-yard.jpg";
+import projectEkbwalkCrowd from "@/assets/project-ekbwalk-crowd.jpg";
+import projectKonchalovskyPortrait from "@/assets/project-konchalovsky-portrait.jpg";
+import projectMuseumPhoto from "@/assets/project-museum-photo.jpg";
 
 
 export const Route = createFileRoute("/")({
@@ -560,6 +568,33 @@ function Resume() {
       <section id="projects" className="scroll-mt-20 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle>Проекты</SectionTitle>
+
+          {/* Collage */}
+          <div className="mb-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+            {[
+              { src: projectSolidarnost, alt: "«История солидарности» — книга", className: "aspect-[3/4] md:row-span-2 md:aspect-[3/5]" },
+              { src: projectKodGoroda, alt: "«Код города. Екатеринбург» — книга", className: "aspect-square" },
+              { src: projectEkbwalkYard, alt: "Прогулка во дворе с Екб_гуляем", className: "aspect-square" },
+              { src: projectMampochitaiPoster, alt: "Афиша подкаста «Мам, почитай»", className: "aspect-[3/4] md:row-span-2 md:aspect-[3/5]" },
+              { src: projectMuseumPhoto, alt: "Музей истории Екатеринбурга", className: "aspect-square" },
+              { src: projectEkbwalkCrowd, alt: "Экскурсия Екб_гуляем", className: "aspect-square" },
+              { src: projectKonchalovskyPortrait, alt: "Портрет — проект для Продюсерского центра Кончаловского", className: "aspect-[4/3] md:col-span-2" },
+              { src: projectMampochitaiBooks, alt: "Книги подкаста «Мам, почитай»", className: "aspect-[4/3] md:col-span-2" },
+            ].map((img, i) => (
+              <div
+                key={i}
+                className={`overflow-hidden rounded-2xl border border-border bg-background ${img.className}`}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+
           <ul className="space-y-4">
             {projects.map((p, i) => (
               <li
