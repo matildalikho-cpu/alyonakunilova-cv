@@ -7,6 +7,14 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 import alenaPhoto from "@/assets/profile-orange.png";
 import konturLogo from "@/assets/logo-kontur.png";
+import projectKodGoroda from "@/assets/project-kod-goroda.jpg";
+import projectSolidarnost from "@/assets/project-solidarnost.jpg";
+import projectMampochitaiPoster from "@/assets/project-mampochitai-poster.jpg";
+import projectMampochitaiBooks from "@/assets/project-mampochitai-books.jpg";
+import projectEkbwalkYard from "@/assets/project-ekbwalk-yard.jpg";
+import projectEkbwalkCrowd from "@/assets/project-ekbwalk-crowd.jpg";
+import projectKonchalovskyPortrait from "@/assets/project-konchalovsky-portrait.jpg";
+import projectMuseumPhoto from "@/assets/project-museum-photo.jpg";
 
 
 export const Route = createFileRoute("/")({
