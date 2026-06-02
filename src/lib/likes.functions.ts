@@ -6,17 +6,9 @@ import type { Database } from "@/integrations/supabase/types";
 import { z } from "zod";
 import { timingSafeEqual, createHash } from "crypto";
 
-// Anon client for public read-only operations (RLS applies, no service-role)
-let _supabaseAnon: ReturnType<typeof createClient<Database>> | undefined;
-function getAnonClient() {
-  if (_supabaseAnon) return _supabaseAnon;
-  const url = process.env.SUPABASE_URL!;
-  const key = process.env.SUPABASE_PUBLISHABLE_KEY!;
-  _supabaseAnon = createClient<Database>(url, key, {
-    auth: { persistSession: false, autoRefreshToken: false },
-  });
-  return _supabaseAnon;
-}
+// Note: reads use supabaseAdmin because the `likes` table contains
+// fingerprint/user_agent values we do not want to expose via a public
+// SELECT RLS policy. Rate limiting + caching below mitigate abuse.
 
 // Simple in-memory rate limiter (per worker isolate).
 // Not distributed, but raises the cost of trivial flooding.
