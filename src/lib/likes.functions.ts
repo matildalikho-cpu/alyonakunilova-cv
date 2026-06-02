@@ -1,25 +1,98 @@
 import { createServerFn } from "@tanstack/react-start";
+import { getRequest } from "@tanstack/react-start/server";
+import { createClient } from "@supabase/supabase-js";
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
+import type { Database } from "@/integrations/supabase/types";
 import { z } from "zod";
 import { timingSafeEqual, createHash } from "crypto";
 
+// Anon client for public read-only operations (RLS applies, no service-role)
+let _supabaseAnon: ReturnType<typeof createClient<Database>> | undefined;
+function getAnonClient() {
+  if (_supabaseAnon) return _supabaseAnon;
+  const url = process.env.SUPABASE_URL!;
+  const key = process.env.SUPABASE_PUBLISHABLE_KEY!;
+  _supabaseAnon = createClient<Database>(url, key, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+  return _supabaseAnon;
+}
+
+// Simple in-memory rate limiter (per worker isolate).
+// Not distributed, but raises the cost of trivial flooding.
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX = 20;
+const rateBuckets = new Map<string, { count: number; reset: number }>();
+
+function getClientIp(): string {
+  try {
+    const req = getRequest();
+    const h = req.headers;
+    return (
+      h.get("cf-connecting-ip") ||
+      h.get("x-real-ip") ||
+      h.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      "unknown"
+    );
+  } catch {
+    return "unknown";
+  }
+}
+
+function checkRateLimit(key: string) {
+  const now = Date.now();
+  const bucket = rateBuckets.get(key);
+  if (!bucket || bucket.reset < now) {
+    rateBuckets.set(key, { count: 1, reset: now + RATE_LIMIT_WINDOW_MS });
+    return;
+  }
+  bucket.count += 1;
+  if (bucket.count > RATE_LIMIT_MAX) {
+    throw new Error("Rate limit exceeded. Please try again later.");
+  }
+  // Opportunistic cleanup
+  if (rateBuckets.size > 5000) {
+    for (const [k, v] of rateBuckets) {
+      if (v.reset < now) rateBuckets.delete(k);
+    }
+  }
+}
+
+// Fingerprint must be a hex-like opaque token (no arbitrary chars).
+const fingerprintSchema = z
+  .string()
+  .min(16)
+  .max(128)
+  .regex(/^[a-zA-Z0-9_-]+$/, "Invalid fingerprint format");
+
+// Cache the public count briefly to absorb traffic spikes.
+let countCache: { value: number; expires: number } | null = null;
+const COUNT_TTL_MS = 5_000;
+
 export const getLikesCount = createServerFn({ method: "GET" })
   .handler(async () => {
-    const { count, error } = await supabaseAdmin
+    const now = Date.now();
+    if (countCache && countCache.expires > now) return countCache.value;
+
+    const { count, error } = await getAnonClient()
       .from("likes")
       .select("*", { count: "exact", head: true });
 
     if (error) {
       console.error("Error fetching likes count:", error);
-      return 0;
+      return countCache?.value ?? 0;
     }
-    return count || 0;
+    const value = count ?? 0;
+    countCache = { value, expires: now + COUNT_TTL_MS };
+    return value;
   });
 
 export const hasLiked = createServerFn({ method: "POST" })
-  .inputValidator(z.object({ fingerprint: z.string().min(8).max(128) }))
+  .inputValidator(z.object({ fingerprint: fingerprintSchema }))
   .handler(async ({ data }) => {
-    const { count, error } = await supabaseAdmin
+    checkRateLimit(`hasLiked:${getClientIp()}`);
+
+    const { count, error } = await getAnonClient()
       .from("likes")
       .select("*", { count: "exact", head: true })
       .eq("fingerprint", data.fingerprint);
@@ -33,10 +106,14 @@ export const hasLiked = createServerFn({ method: "POST" })
 
 export const toggleLike = createServerFn({ method: "POST" })
   .inputValidator(z.object({
-    fingerprint: z.string().min(8).max(128),
+    fingerprint: fingerprintSchema,
     userAgent: z.string().max(512).optional(),
   }))
   .handler(async ({ data }) => {
+    const ip = getClientIp();
+    checkRateLimit(`toggleLike:ip:${ip}`);
+    checkRateLimit(`toggleLike:fp:${data.fingerprint}`);
+
     const { data: existing, error: selErr } = await supabaseAdmin
       .from("likes")
       .select("id")
@@ -47,6 +124,8 @@ export const toggleLike = createServerFn({ method: "POST" })
       console.error("Error checking like:", selErr);
       throw new Error("Failed to toggle like");
     }
+
+    countCache = null;
 
     if (existing && existing.length > 0) {
       const { error } = await supabaseAdmin
