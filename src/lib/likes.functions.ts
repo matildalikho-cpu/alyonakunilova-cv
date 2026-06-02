@@ -16,7 +16,7 @@ export const getLikesCount = createServerFn({ method: "GET" })
   });
 
 export const hasLiked = createServerFn({ method: "POST" })
-  .inputValidator(z.object({ fingerprint: z.string().min(1) }))
+  .inputValidator(z.object({ fingerprint: z.string().min(8).max(128) }))
   .handler(async ({ data }) => {
     const { count, error } = await supabaseAdmin
       .from("likes")
@@ -32,8 +32,8 @@ export const hasLiked = createServerFn({ method: "POST" })
 
 export const toggleLike = createServerFn({ method: "POST" })
   .inputValidator(z.object({
-    fingerprint: z.string().min(1),
-    userAgent: z.string().optional(),
+    fingerprint: z.string().min(8).max(128),
+    userAgent: z.string().max(512).optional(),
   }))
   .handler(async ({ data }) => {
     const { data: existing, error: selErr } = await supabaseAdmin
