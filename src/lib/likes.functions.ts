@@ -1,8 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequest } from "@tanstack/react-start/server";
-import { createClient } from "@supabase/supabase-js";
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
-import type { Database } from "@/integrations/supabase/types";
 import { z } from "zod";
 import { timingSafeEqual, createHash } from "crypto";
 
@@ -66,7 +64,7 @@ export const getLikesCount = createServerFn({ method: "GET" })
     const now = Date.now();
     if (countCache && countCache.expires > now) return countCache.value;
 
-    const { count, error } = await getAnonClient()
+    const { count, error } = await supabaseAdmin
       .from("likes")
       .select("*", { count: "exact", head: true });
 
@@ -84,7 +82,7 @@ export const hasLiked = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     checkRateLimit(`hasLiked:${getClientIp()}`);
 
-    const { count, error } = await getAnonClient()
+    const { count, error } = await supabaseAdmin
       .from("likes")
       .select("*", { count: "exact", head: true })
       .eq("fingerprint", data.fingerprint);
