@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
 import { z } from "zod";
+import { timingSafeEqual, createHash } from "crypto";
 
 export const getLikesCount = createServerFn({ method: "GET" })
   .handler(async () => {
@@ -73,9 +74,12 @@ export const toggleLike = createServerFn({ method: "POST" })
   });
 
 export const getLikesList = createServerFn({ method: "POST" })
-  .inputValidator(z.object({ password: z.string() }))
+  .inputValidator(z.object({ password: z.string().min(16).max(256) }))
   .handler(async ({ data }) => {
-    if (data.password !== process.env.ADMIN_PASSWORD) {
+    const adminPassword = process.env.ADMIN_PASSWORD ?? "";
+    const ha = createHash("sha256").update(data.password).digest();
+    const hb = createHash("sha256").update(adminPassword).digest();
+    if (!timingSafeEqual(ha, hb)) {
       throw new Error("Unauthorized");
     }
 
