@@ -32,8 +32,8 @@ export const hasLiked = createServerFn({ method: "POST" })
 
 export const toggleLike = createServerFn({ method: "POST" })
   .inputValidator(z.object({
-    fingerprint: z.string().min(1),
-    userAgent: z.string().optional(),
+    fingerprint: z.string().min(8).max(128),
+    userAgent: z.string().max(512).optional(),
   }))
   .handler(async ({ data }) => {
     const { data: existing, error: selErr } = await supabaseAdmin
