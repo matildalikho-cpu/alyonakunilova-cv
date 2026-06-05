@@ -161,4 +161,361 @@ const jobs: Job[] = [
     role: "Журналист → Редактор → Бренд-менеджер → Руководитель отдела продвижения → Менеджер онлайн-портала",
     body: (
       <p className="text-muted-foreground">
-        Прошла путь от журналиста до руководителя отдела продвижения в одном из крупнейших региональных медиахолдингов. Была частью управляющей команды «Делового квартала» — участвовала в запуске сети журналов в городах-миллионниках: Челябинск, Новосибирск, Рос
+        Прошла путь от журналиста до руководителя отдела продвижения в одном из крупнейших региональных медиахолдингов. Была частью управляющей команды «Делового квартала» — участвовала в запуске сети журналов в городах-миллионниках: Челябинск, Новосибирск, Ростов-на-Дону, Красноярск.
+      </p>
+    ),
+  },
+];
+
+const skillGroups = [
+  { title: "Стратегия", items: ["Контент-стратегия", "Контентные воронки", "ABM-контент", "GTM-запуски"] },
+  { title: "Каналы", items: ["Email-маркетинг", "Соцсети", "Блог / SEO", "Лендинги", "​Ивенты", "PR и СМИ"] },
+  { title: "Продакшн", items: ["Редактура", "Копирайтинг", "ИИ-инструменты", "Продюсирование образовательных продуктов", "Ивент-менеджмент"] },
+  { title: "Языки", items: ["Английский — C1", "Русский — родной"] },
+];
+
+const education = [
+  { place: "МГИМО", what: "Международный маркетинг", note: "профессиональная переподготовка · отлично" },
+  { place: "Институт Международных Связей", what: "Связи с общественностью", note: "специалист · отлично" },
+  { place: "УГТУ–УПИ (УрФУ)", what: "Менеджмент", note: "специалист · отлично" },
+  { place: "Институт Международных Связей", what: "Переводчик в сфере профессиональной коммуникации", note: "повышение квалификации" },
+];
+
+const projects: React.ReactNode[] = [
+  <>
+    Куратор/Продюсер/Лектор: Музей истории Екатеринбурга (проект{" "}
+    <a href="https://youtu.be/72W1vbg3erE" target="_blank" rel="noreferrer" className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground">«Лаборатория воспоминаний»</a>
+    ) (2019 – 2022)
+  </>,
+  <>
+    Редактор проекта{" "}
+    <a href="https://xn--80ahlaacrtdbfqgfdien0v.xn--p1ai/" target="_blank" rel="noreferrer" className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground">«История солидарности»</a>{" "}
+    — книга и сайт о комьюнити Екатеринбурга (2021)
+  </>,
+  <>
+    Партнёр по рекламным интеграциям и коллаборациям: подкаст{" "}
+    <a href="https://www.instagram.com/podcastmampochitai/" target="_blank" rel="noreferrer" className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground">«Мам, почитай»</a>{" "}
+    (2021 – 2022)
+  </>,
+  <>
+    Редактор: Продюсерский центр Андрея Кончаловского (проект{" "}
+    <a href="https://vk.com/istoriya_ot_pervogo_lica" target="_blank" rel="noreferrer" className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground">«Истории от первого лица»</a>
+    ) (2021)
+  </>,
+  "Редактор проекта «Код города» — книга о ДНК Екатеринбурга (2022)",
+  <>
+    Участник сообщества{" "}
+    <a href="https://t.me/ekbwalk" target="_blank" rel="noreferrer" className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground">«Екб_гуляем»</a>
+    , автор городских прогулок и паблика{" "}
+    <a href="https://t.me/ulitsabazhova" target="_blank" rel="noreferrer" className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground">«Улица Бажова»</a>
+  </>,
+];
+
+function Resume() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Header */}
+      <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
+          <div className="flex items-center gap-3">
+            <img src={konturLogo} alt="Контур" className="h-7 w-auto" />
+            
+              href="https://kontur.ru/career/vacancies/5737#ResumeForm"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:opacity-90"
+            >
+              К вакансии →
+            </a>
+          </div>
+          <nav className="hidden items-center gap-x-5 gap-y-2 text-sm text-muted-foreground md:flex md:flex-wrap md:justify-end">
+            <a href="#about" className="transition-colors hover:text-foreground">О себе</a>
+            <a href="#experience" className="transition-colors hover:text-foreground">Опыт работы</a>
+            <a href="#skills" className="transition-colors hover:text-foreground">Навыки</a>
+            <a href="#education" className="transition-colors hover:text-foreground">Образование</a>
+            <a href="#projects" className="transition-colors hover:text-foreground">Проекты</a>
+            <a href="#motivation" className="transition-colors hover:text-foreground">Мотивация и рекомендации</a>
+            <button
+              type="button"
+              onClick={() => {
+                window.history.replaceState(null, "", window.location.pathname + window.location.search);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1 transition-colors hover:text-foreground hover:bg-accent"
+              aria-label="Наверх резюме"
+            >
+              ↑ Наверх
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="mx-auto max-w-6xl px-6 pt-8 pb-12 md:pt-12 md:pb-16">
+        <div className="mb-6 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+          <span>Резюме</span>
+          <span>→</span>
+          <span>Маркетинг</span>
+        </div>
+        <div className="flex flex-col-reverse items-start gap-6 md:flex-row md:items-center md:gap-10">
+          <div className="flex-1">
+            <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl">
+              Алёна Кунилова
+            </h1>
+            <p className="mt-4 text-xl text-muted-foreground md:text-2xl">
+              Контент-маркетолог в Толк, <span className="text-foreground">senior</span>
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              
+                href="#contacts"
+                className="inline-flex items-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+              >
+                Контакты ↓
+              </a>
+              
+                href="#video"
+                className="inline-flex items-center rounded-full border border-[var(--kontur-orange)] bg-[var(--kontur-orange)]/15 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-[var(--kontur-orange)]/25"
+              >
+                Видеовизитка ↓
+              </a>
+            </div>
+            <p className="mt-4 text-xs text-muted-foreground">
+              © Алёна Кунилова · Сделано с уважением к стилю Контура
+            </p>
+          </div>
+          <div className="shrink-0">
+            <div className="relative flex h-40 w-40 items-center justify-center overflow-hidden rounded-3xl bg-[var(--kontur-orange)] md:h-56 md:w-56">
+              <img src={alenaPhoto} alt="Алёна Кунилова" className="h-full w-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="scroll-mt-20 bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <SectionTitle>О себе</SectionTitle>
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="rounded-3xl border border-border bg-background p-8 md:p-10 lg:col-span-2">
+              <p className="text-2xl font-medium leading-snug tracking-tight text-foreground md:text-3xl">
+                Помогаю сложным продуктам говорить с аудиторией на понятном языке — без официоза, штампов и абстракций.
+              </p>
+              <p className="mt-6 text-lg leading-relaxed text-foreground/75">
+                Объясняю, пишу, редактирую, упаковываю и помогаю командам доносить идеи через тексты во всех возможных форматах.
+              </p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <div className="rounded-3xl border border-border bg-background p-6">
+                <div className="text-4xl font-bold tracking-tight">B2B · SaaS · AI</div>
+                <div className="mt-2 text-sm text-muted-foreground">PropTech, Gaming, Blockchain, Digital services, B2C, Media</div>
+              </div>
+              <div className="rounded-3xl border border-[var(--kontur-green)] bg-[var(--kontur-green)]/15 p-6">
+                <div className="text-sm font-medium uppercase tracking-wider text-foreground/70">Сейчас</div>
+                <div className="mt-2 text-lg font-semibold">Соло-маркетолог PropTech-платформы</div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl border border-border bg-background p-8">
+              <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">Откуда я</div>
+              <p className="text-lg leading-relaxed text-foreground/85">
+                Свою карьеру начинала как копирайтер и журналист деловых изданий — отсюда привычка искать информацию, проверять факты, слышать тон и находить смыслы.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-border bg-background p-8">
+              <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">Где и с кем я работала</div>
+              <p className="text-lg leading-relaxed text-foreground/85">
+                В больших корпорациях, в стартапах и самостоятельно. С кросс-функциональными командами и подрядчиками, разработчиками и креативными специалистами, топ-менеджерами и фаундерами — со всеми нахожу общий язык и легко осваиваю новый контекст.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 grid gap-6 md:grid-cols-5">
+            <div className="rounded-3xl border border-border bg-background p-8 md:col-span-2">
+              <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">Что люблю</div>
+              <p className="text-lg leading-relaxed text-foreground/85">
+                Интеллектуальные задачи, где нужно быстро разобраться в теме и превратить хаос в систему. Мне комфортна как работа с конкретной зоной ответственности, так и многозадачные роли.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-border bg-background p-8 md:col-span-3">
+              <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">Сегодня</div>
+              <p className="text-lg leading-relaxed text-foreground/85">
+                Работаю в международном стартапе для управдомов и управляющих компаний. Отвечаю за маркетинговые коммуникации: контент для блога и соцсетей, презентационные материалы, лидогенерацию, ивенты, скрипты для продаж и коммерческие предложения. Активно использую AI-инструменты в работе — для текстов, изображений, видео, дизайна, лендингов.
+              </p>
+              <div className="mt-6 flex items-center gap-3 rounded-2xl bg-sky-500 px-5 py-4 text-white">
+                <Video className="h-6 w-6 shrink-0" strokeWidth={2.2} />
+                <p className="text-base">
+                  И да — для созвонов внутри команды мы сейчас используем именно{" "}
+                  <span className="font-semibold">Толк</span>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section id="experience" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
+        <SectionTitle>Опыт работы</SectionTitle>
+        <div className="space-y-5">
+          {jobs.map((job) => (
+            <article
+              key={job.company + job.period}
+              className="rounded-3xl border border-border bg-card p-8 transition-colors hover:bg-secondary md:p-10"
+            >
+              <div className="flex flex-col gap-2 border-b border-border pb-5 md:flex-row md:items-baseline md:justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-foreground md:text-3xl">{job.company}</h3>
+                  {job.meta && <p className="mt-1 text-muted-foreground">{job.meta}</p>}
+                </div>
+                <span className="shrink-0 text-sm text-muted-foreground">{job.period}</span>
+              </div>
+              <p className="mt-5 text-lg font-medium text-foreground">{job.role}</p>
+              <div className="mt-4 text-base leading-relaxed">{job.body}</div>
+            </article>
+          ))}
+          <div className="rounded-3xl border border-border bg-background p-8 md:p-10">
+            <p className="text-base leading-relaxed text-muted-foreground">
+              Ранее — репортёр «Коммерсантъ-Урал», копирайтер в бюро паблисити и PR «КБ-32».
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section id="skills" className="scroll-mt-20 bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <SectionTitle>Навыки</SectionTitle>
+          <div className="grid gap-8 md:grid-cols-2">
+            {skillGroups.map((g) => (
+              <div key={g.title} className="rounded-3xl border border-border bg-background p-8">
+                <h3 className="mb-5 text-xl font-bold">{g.title}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {g.items.map((i) => (
+                    <Pill key={i}>{i}</Pill>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Education */}
+      <section id="education" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
+        <SectionTitle>Образование</SectionTitle>
+        <div className="grid gap-5 md:grid-cols-2">
+          {education.map((e) => (
+            <div key={e.place + e.what} className="rounded-3xl border border-border bg-card p-7">
+              <h3 className="text-xl font-bold">{e.place}</h3>
+              <p className="mt-2 text-foreground/85">{e.what}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{e.note}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="scroll-mt-20 bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <SectionTitle>Проекты</SectionTitle>
+          <div className="mb-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+            {[
+              { src: projectSolidarnost, alt: "«История солидарности» — книга" },
+              { src: projectKodGoroda, alt: "«Код города. Екатеринбург» — книга" },
+              { src: projectMampochitaiPoster, alt: "Афиша подкаста «Мам, почитай»" },
+              { src: projectMampochitaiBooks, alt: "Книги подкаста «Мам, почитай»" },
+              { src: projectEkbwalkYard, alt: "Прогулка во дворе с Екб_гуляем" },
+              { src: projectEkbwalkCrowd, alt: "Экскурсия Екб_гуляем" },
+              { src: projectKonchalovskyPortrait, alt: "Портрет — проект для Продюсерского центра Кончаловского" },
+              { src: projectMuseumPhoto, alt: "Музей истории Екатеринбурга" },
+            ].map((img, i) => (
+              <div key={i} className="aspect-square overflow-hidden rounded-2xl border border-border bg-background">
+                <img src={img.src} alt={img.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
+              </div>
+            ))}
+          </div>
+          <ul className="space-y-4">
+            {projects.map((p, i) => (
+              <li key={i} className="flex gap-4 rounded-2xl border border-border bg-background p-6 text-lg text-foreground/85">
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--kontur-green)]" />
+                <span>{p}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Motivation */}
+      <section id="motivation" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
+        <SectionTitle>Мотивация и рекомендации</SectionTitle>
+        <div className="rounded-3xl border border-border bg-card p-8 md:p-12">
+          <p className="text-xl leading-relaxed text-foreground/90">
+            Мне близки ценности Контура и интересен продукт. Думаю, что смогу здесь применить весь свой профессионализм и опыт, быстро стартовать в роли и эффективно решать задачи бизнеса. Среди моих экс-коллег есть те, кто сейчас или раньше работал в Контуре, и они будут рады меня рекомендовать.
+          </p>
+          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+            А пока — чтобы дать более живое представление обо мне как специалисте и человеке — я попросила ChatGPT, с которым мы ежедневно работаем над проектами, рассказать обо мне подробнее 😉
+          </p>
+          <Link
+            to="/chatgpt"
+            className="mt-8 inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
+          >
+            Что думает обо мне ChatGPT →
+          </Link>
+        </div>
+      </section>
+
+      {/* Contacts */}
+      <section id="contacts" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
+        <SectionTitle>Контакты</SectionTitle>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="mailto:salyona@gmail.com" className="group rounded-3xl border border-border bg-card p-6 transition-colors hover:border-primary">
+            <div className="text-sm text-muted-foreground">Почта</div>
+            <div className="mt-2 text-lg font-medium text-foreground group-hover:text-primary">salyona@gmail.com</div>
+          </a>
+          <a href="tel:+79120486250" className="group rounded-3xl border border-border bg-card p-6 transition-colors hover:border-primary">
+            <div className="text-sm text-muted-foreground">Телефон</div>
+            <div className="mt-2 text-lg font-medium text-foreground group-hover:text-primary">+7 912 048-62-50</div>
+          </a>
+          <a href="https://t.me/AlyonaRocket" target="_blank" rel="noreferrer" className="group rounded-3xl border border-border bg-card p-6 transition-colors hover:border-primary">
+            <div className="text-sm text-muted-foreground">Telegram</div>
+            <div className="mt-2 text-lg font-medium text-foreground group-hover:text-primary">@AlyonaRocket</div>
+          </a>
+        </div>
+      </section>
+
+      {/* Video */}
+      <section id="video" className="scroll-mt-20 bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <SectionTitle>Видеовизитка</SectionTitle>
+          <div className="overflow-hidden rounded-3xl border border-border bg-background">
+            <video
+              src="/video-vizitka.mp4"
+              poster="/video-poster.jpg"
+              controls
+              playsInline
+              preload="metadata"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="mt-8 flex justify-center">
+            
+              href="https://t.me/AlyonaRocket"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90"
+            >
+              Позвать на интервью →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-border">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <span>© 2026 Алёна Кунилова · Резюме для Контур.Толк</span>
+          <span>Сделано с уважением к стилю Контура ✦</span>
+        </div>
+      </footer>
+    </div>
+  );
+}
