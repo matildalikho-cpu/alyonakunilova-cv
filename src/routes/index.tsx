@@ -1,8 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Video } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
 
 import alenaPhoto from "@/assets/profile-orange.png";
-import konturLogo from "@/assets/logo-kontur.png";
 import projectKodGoroda from "@/assets/project-kod-goroda.jpg";
 import projectSolidarnost from "@/assets/project-solidarnost.jpg";
 import projectMampochitaiPoster from "@/assets/project-mampochitai-poster.jpg";
@@ -135,17 +133,14 @@ function Resume() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
-          <div className="flex items-center gap-3">
-            <img src={konturLogo} alt="Контур" className="h-7 w-auto" />
-            <a href="https://kontur.ru/career/vacancies/5737#ResumeForm" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:opacity-90">К вакансии →</a>
-          </div>
+          <div className="text-lg font-semibold tracking-tight">Алёна Кунилова</div>
           <nav className="hidden items-center gap-x-5 gap-y-2 text-sm text-muted-foreground md:flex md:flex-wrap md:justify-end">
             <a href="#about" className="transition-colors hover:text-foreground">О себе</a>
             <a href="#experience" className="transition-colors hover:text-foreground">Опыт работы</a>
             <a href="#skills" className="transition-colors hover:text-foreground">Навыки</a>
             <a href="#education" className="transition-colors hover:text-foreground">Образование</a>
             <a href="#projects" className="transition-colors hover:text-foreground">Проекты</a>
-            <a href="#motivation" className="transition-colors hover:text-foreground">Мотивация и рекомендации</a>
+            <a href="#contacts" className="transition-colors hover:text-foreground">Контакты</a>
             <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1 transition-colors hover:text-foreground hover:bg-accent">↑ Наверх</button>
           </nav>
         </div>
@@ -158,12 +153,13 @@ function Resume() {
         <div className="flex flex-col-reverse items-start gap-6 md:flex-row md:items-center md:gap-10">
           <div className="flex-1">
             <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl">Алёна Кунилова</h1>
-            <p className="mt-4 text-xl text-muted-foreground md:text-2xl">Контент-маркетолог в Толк, <span className="text-foreground">senior</span></p>
+            <p className="mt-4 text-xl text-muted-foreground md:text-2xl">
+              Контент-маркетолог · Бренд-маркетолог · PR-менеджер · B2B-маркетолог · Продюсер контента · Редактор · <span className="text-foreground">senior</span>
+            </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="#contacts" className="inline-flex items-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent">Контакты ↓</a>
-              <a href="#video" className="inline-flex items-center rounded-full border border-[var(--kontur-orange)] bg-[var(--kontur-orange)]/15 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-[var(--kontur-orange)]/25">Видеовизитка ↓</a>
             </div>
-            <p className="mt-4 text-xs text-muted-foreground">© Алёна Кунилова · Сделано с уважением к стилю Контура</p>
+            <p className="mt-4 text-xs text-muted-foreground">© Алёна Кунилова</p>
           </div>
           <div className="shrink-0">
             <div className="relative flex h-40 w-40 items-center justify-center overflow-hidden rounded-3xl bg-[var(--kontur-orange)] md:h-56 md:w-56">
@@ -210,10 +206,6 @@ function Resume() {
             <div className="rounded-3xl border border-border bg-background p-8 md:col-span-3">
               <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">Сегодня</div>
               <p className="text-lg leading-relaxed text-foreground/85">Работаю в международном стартапе для управдомов и управляющих компаний. Отвечаю за маркетинговые коммуникации: контент для блога и соцсетей, презентационные материалы, лидогенерацию, ивенты, скрипты для продаж и коммерческие предложения. Активно использую AI-инструменты в работе.</p>
-              <div className="mt-6 flex items-center gap-3 rounded-2xl bg-sky-500 px-5 py-4 text-white">
-                <Video className="h-6 w-6 shrink-0" strokeWidth={2.2} />
-                <p className="text-base">И да — для созвонов внутри команды мы сейчас используем именно <span className="font-semibold">Толк</span>.</p>
-              </div>
             </div>
           </div>
         </div>
@@ -289,14 +281,6 @@ function Resume() {
         </div>
       </section>
 
-      <section id="motivation" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
-        <SectionTitle>Мотивация и рекомендации</SectionTitle>
-        <div className="rounded-3xl border border-border bg-card p-8 md:p-12">
-          <p className="text-xl leading-relaxed text-foreground/90">Мне близки ценности Контура и интересен продукт. Думаю, что смогу здесь применить весь свой профессионализм и опыт, быстро стартовать в роли и эффективно решать задачи бизнеса. Среди моих экс-коллег есть те, кто сейчас или раньше работал в Контуре, и они будут рады меня рекомендовать.</p>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">А пока — чтобы дать более живое представление обо мне как специалисте и человеке — я попросила ChatGPT, с которым мы ежедневно работаем над проектами, рассказать обо мне подробнее 😉</p>
-          <Link to="/chatgpt" className="mt-8 inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90">Что думает обо мне ChatGPT →</Link>
-        </div>
-      </section>
 
       <section id="contacts" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Контакты</SectionTitle>
@@ -316,22 +300,9 @@ function Resume() {
         </div>
       </section>
 
-      <section id="video" className="scroll-mt-20 bg-card">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <SectionTitle>Видеовизитка</SectionTitle>
-          <div className="overflow-hidden rounded-3xl border border-border bg-background">
-            <video src="/video-vizitka.mp4" poster="/video-poster.jpg" controls playsInline preload="metadata" className="h-auto w-full" />
-          </div>
-          <div className="mt-8 flex justify-center">
-            <a href="https://t.me/AlyonaRocket" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:opacity-90">Позвать на интервью →</a>
-          </div>
-        </div>
-      </section>
-
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 Алёна Кунилова · Резюме для Контур.Толк</span>
-          <span>Сделано с уважением к стилю Контура ✦</span>
+          <span>© 2026 Алёна Кунилова</span>
         </div>
       </footer>
     </div>
