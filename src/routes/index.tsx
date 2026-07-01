@@ -180,7 +180,7 @@ function Resume() {
             <div className="flex flex-col gap-4">
               <div className="rounded-3xl border border-border bg-background p-6">
                 <div className="text-4xl font-bold tracking-tight">B2B · SaaS · AI</div>
-                <div className="mt-2 text-sm text-muted-foreground">PropTech, Gaming, Blockchain, Digital services, B2C, Media</div>
+                <div className="mt-2 text-sm text-muted-foreground">PropTech, Gaming, Blockchain, Web3 / Crypto Acquiring, Digital services, B2C, Media</div>
               </div>
               <div className="rounded-3xl border border-[var(--kontur-green)] bg-[var(--kontur-green)]/15 p-6">
                 <div className="text-sm font-medium uppercase tracking-wider text-foreground/70">Сейчас</div>
