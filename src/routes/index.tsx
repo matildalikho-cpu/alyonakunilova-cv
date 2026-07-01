@@ -148,7 +148,7 @@ function Resume() {
 
       <section className="mx-auto max-w-6xl px-6 pt-8 pb-12 md:pt-12 md:pb-16">
         <div className="mb-6 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-          <span>Резюме</span><span>→</span><span>Маркетинг</span>
+          <span>CV</span>
         </div>
         <div className="flex flex-col-reverse items-start gap-6 md:flex-row md:items-center md:gap-10">
           <div className="flex-1">
