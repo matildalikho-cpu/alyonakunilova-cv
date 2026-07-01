@@ -139,7 +139,7 @@ function Resume() {
             <a href="#experience" className="transition-colors hover:text-foreground">Опыт работы</a>
             <a href="#skills" className="transition-colors hover:text-foreground">Навыки</a>
             <a href="#education" className="transition-colors hover:text-foreground">Образование</a>
-            <a href="#projects" className="transition-colors hover:text-foreground">Проекты</a>
+            <a href="#projects" className="transition-colors hover:text-foreground">Сайд-проекты</a>
             <a href="#contacts" className="transition-colors hover:text-foreground">Контакты</a>
             <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1 transition-colors hover:text-foreground hover:bg-accent">↑ Наверх</button>
           </nav>
@@ -262,7 +262,7 @@ function Resume() {
 
       <section id="projects" className="scroll-mt-20 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <SectionTitle>Проекты</SectionTitle>
+          <SectionTitle>Сайд-проекты</SectionTitle>
           <div className="mb-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
             {images.map((img, i) => (
               <div key={i} className="aspect-square overflow-hidden rounded-2xl border border-border bg-background">
