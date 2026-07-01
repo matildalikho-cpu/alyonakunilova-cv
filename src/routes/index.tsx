@@ -153,8 +153,8 @@ function Resume() {
         <div className="flex flex-col-reverse items-start gap-6 md:flex-row md:items-center md:gap-10">
           <div className="flex-1">
             <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl">Алёна Кунилова</h1>
-            <p className="mt-4 text-xl text-muted-foreground md:text-2xl">
-              Контент-маркетолог · Бренд-маркетолог · PR-менеджер · B2B-маркетолог · Продюсер контента · Редактор · <span className="text-foreground">senior</span>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+              Head of Content · Head of Communications · Head of Marketing Communications · Head of Brand Communications · Content Marketing Lead · B2B Marketing Lead · Marketing Lead · Growth &amp; Content Lead · PR &amp; Communications Lead · Brand &amp; Content Lead · GTM Lead · Demand Generation Lead · Product Marketing Lead
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="#contacts" className="inline-flex items-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent">Контакты ↓</a>
