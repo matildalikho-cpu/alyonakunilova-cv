@@ -154,10 +154,10 @@ function Resume() {
           <div className="flex-1">
             <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl">Алёна Кунилова</h1>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              Head of Content&nbsp;· Head of Communications&nbsp;· Head of Marketing Communications&nbsp;· Head of Brand Communications
+              Head of Content&nbsp;· Head of Marketing &amp; Brand Communications · Content Marketing Lead ·&nbsp;
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              Content Marketing Lead&nbsp;· B2B Marketing Lead&nbsp;· Marketing Lead&nbsp;· Growth &amp; Content Lead
+              B2С &amp; B2B Marketing Lead&nbsp;· Marketing Lead&nbsp;· Growth &amp; Content Lead ·&nbsp;
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
               PR &amp; Communications Lead&nbsp;· Brand &amp; Content Lead&nbsp;· GTM Lead&nbsp;· Product Marketing Lead
