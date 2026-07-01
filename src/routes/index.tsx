@@ -175,7 +175,7 @@ function Resume() {
           <div className="grid gap-6 lg:grid-cols-3">
             <div className="rounded-3xl border border-border bg-background p-8 md:p-10 lg:col-span-2">
               <p className="text-2xl font-medium leading-snug tracking-tight text-foreground md:text-3xl">Помогаю сложным продуктам говорить с аудиторией на понятном языке — без официоза, штампов и абстракций.</p>
-              <p className="mt-6 text-lg leading-relaxed text-foreground/75">Объясняю, пишу, редактирую, упаковываю и помогаю командам доносить идеи через тексты во всех возможных форматах.</p>
+              <p className="mt-6 text-lg leading-relaxed text-foreground/75">Объясняю, пишу, редактирую, упаковываю и помогаю командам доносить идеи через коммуникацию во всех возможных форматах.</p>
             </div>
             <div className="flex flex-col gap-4">
               <div className="rounded-3xl border border-border bg-background p-6">
