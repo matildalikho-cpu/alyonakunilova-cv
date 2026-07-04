@@ -1,5 +1,5 @@
 import { defineTool } from "@lovable.dev/mcp-js";
-import { z } from "zod";
+
 
 const PROFILE = {
   name: "Алёна Кунилова",
@@ -36,5 +36,3 @@ export default defineTool({
   }),
 });
 
-const _unused = z; // keep zod import for schema-typing parity
-void _unused;
