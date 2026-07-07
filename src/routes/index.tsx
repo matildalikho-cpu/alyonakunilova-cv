@@ -199,14 +199,11 @@ function Resume() {
           <SectionTitle>О себе</SectionTitle>
           <div className="grid gap-6 lg:grid-cols-3">
             <div className="rounded-3xl border border-border bg-background p-8 md:p-10 lg:col-span-2">
-              <p className="text-2xl font-medium leading-snug tracking-tight text-foreground md:text-3xl">Помогаю сложным продуктам находить общий язык с людьми — без официоза, штампов и абстракций.</p>
-              <p className="mt-6 text-lg leading-relaxed text-foreground/75">Объясняю, пишу, редактирую, упаковываю и помогаю командам доносить идеи через коммуникацию во всех возможных форматах.</p>
+              <p className="text-lg leading-relaxed text-foreground/85 md:text-xl">
+                Более 10 лет опыта в маркетинге, PR и коммуникациях, профильное образование и широкий опыт в B2B и B2C. Я работала с брендом, контентом, медиа, инфлюенсерами, селебрити, мероприятиями, партнерами, подрядчиками, презентационными и рекламными материалами, а также с коммуникациями вокруг продаж и привлечения клиентов. В том числе работала в люксовом ритейле, была публичным спикером компании и участвовала в образовательных проектах.
+              </p>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="rounded-3xl border border-border bg-background p-6">
-                <div className="text-4xl font-bold tracking-tight">B2B · SaaS · AI</div>
-                <div className="mt-2 text-sm text-muted-foreground">PropTech, Gaming, Blockchain, Web3 / Crypto Acquiring, Digital services, B2C, Media</div>
-              </div>
               <div className="rounded-3xl border border-[var(--kontur-green)] bg-[var(--kontur-green)]/15 p-6">
                 <div className="text-sm font-medium uppercase tracking-wider text-foreground/70">Сейчас</div>
                 <div className="mt-2 text-lg font-semibold">Соло-маркетолог PropTech-платформы</div>
