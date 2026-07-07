@@ -1,3 +1,4 @@
+import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 
 import alenaPhoto from "@/assets/profile-orange.png";
@@ -101,12 +102,30 @@ const skillGroups = [
   { title: "Языки", items: ["Английский — C1", "Русский — родной"] },
 ];
 
-const education = [
+function Spoiler({ children }: { children: React.ReactNode }) {
+  const [revealed, setRevealed] = React.useState(false);
+  return (
+    <span
+      role="button"
+      tabIndex={0}
+      onClick={() => setRevealed((v) => !v)}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setRevealed((v) => !v); } }}
+      className={`cursor-pointer rounded px-1 transition-all ${revealed ? "bg-transparent text-inherit" : "bg-foreground/85 text-transparent select-none"}`}
+      title={revealed ? "Скрыть" : "Показать"}
+    >
+      {children}
+    </span>
+  );
+}
+
+const education: { place: React.ReactNode; what: string; note: string }[] = [
   { place: "МГИМО", what: "Международный маркетинг", note: "профессиональная переподготовка · отлично" },
   { place: "Институт Международных Связей", what: "Связи с общественностью", note: "специалист · отлично" },
   { place: "УГТУ–УПИ (УрФУ)", what: "Менеджмент", note: "специалист · отлично" },
   { place: "Институт Международных Связей", what: "Переводчик в сфере профессиональной коммуникации", note: "повышение квалификации" },
+  { place: <Spoiler>Свободный университет</Spoiler>, what: "Урбанистика и социология городов", note: "слушатель" },
 ];
+
 
 const projects: React.ReactNode[] = [
   <span>Куратор/Продюсер/Лектор: Музей истории Екатеринбурга (проект <a href="https://youtu.be/72W1vbg3erE" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">«Лаборатория воспоминаний»</a>) (2019 – 2022)</span>,
@@ -256,8 +275,9 @@ function Resume() {
       <section id="education" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Образование</SectionTitle>
         <div className="grid gap-5 md:grid-cols-2">
-          {education.map((e) => (
-            <div key={e.place + e.what} className="rounded-3xl border border-border bg-card p-7">
+          {education.map((e, i) => (
+            <div key={i} className="rounded-3xl border border-border bg-card p-7">
+
               <h3 className="text-xl font-bold">{e.place}</h3>
               <p className="mt-2 text-foreground/85">{e.what}</p>
               <p className="mt-3 text-sm text-muted-foreground">{e.note}</p>
