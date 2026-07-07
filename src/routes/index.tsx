@@ -173,13 +173,13 @@ function Resume() {
           <div className="flex-1">
             <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl">Алёна Кунилова</h1>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              Head of Content&nbsp;· Head of Marketing &amp; Brand Communications · Content Marketing Lead ·&nbsp;
+              Head of Marketing &amp; Brand Communications&nbsp;
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              B2С &amp; B2B Marketing Lead&nbsp;· Marketing Lead&nbsp;· Growth &amp; Content Lead ·&nbsp;
+              &nbsp;
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              PR &amp; Communications Lead&nbsp;· Brand &amp; Content Lead&nbsp;· GTM Lead&nbsp;· Product Marketing Lead
+              {"\n"}
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="#contacts" className="inline-flex items-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent">Контакты ↓</a>
