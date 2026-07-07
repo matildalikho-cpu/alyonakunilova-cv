@@ -197,17 +197,11 @@ function Resume() {
       <section id="about" className="scroll-mt-20 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <SectionTitle>О себе</SectionTitle>
-          <div className="grid gap-6 lg:grid-cols-3">
-            <div className="rounded-3xl border border-border bg-background p-8 md:p-10 lg:col-span-2">
+          <div className="grid gap-6">
+            <div className="rounded-3xl border border-border bg-background p-8 md:p-10">
               <p className="text-lg leading-relaxed text-foreground/85 md:text-xl">
                 Более 10 лет опыта в маркетинге, PR и коммуникациях, профильное образование и широкий опыт в B2B и B2C. Я работала с брендом, контентом, медиа, инфлюенсерами, селебрити, мероприятиями, партнерами, подрядчиками, презентационными и рекламными материалами, а также с коммуникациями вокруг продаж и привлечения клиентов. В том числе работала в люксовом ритейле, была публичным спикером компании и участвовала в образовательных проектах.
               </p>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="rounded-3xl border border-[var(--kontur-green)] bg-[var(--kontur-green)]/15 p-6">
-                <div className="text-sm font-medium uppercase tracking-wider text-foreground/70">Сейчас</div>
-                <div className="mt-2 text-lg font-semibold">Соло-маркетолог PropTech-платформы</div>
-              </div>
             </div>
           </div>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
