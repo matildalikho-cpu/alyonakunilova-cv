@@ -35,7 +35,7 @@ const jobs: Job[] = [
     company: "Unitify",
     meta: <><span>SaaS для управления недвижимостью · </span><a href="https://unitify.com/" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">unitify.com</a></>,
     period: "нояб. 2025 — н.в.",
-    role: "Marketing Executive",
+    role: "Head of Global Partnership",
     body: (
       <div>
         <p>Отвечаю за международную B2B-коммуникацию и digital-продвижение PropTech-продукта:</p>
@@ -44,7 +44,7 @@ const jobs: Job[] = [
           <li>— Запуск и ведение рекламных кампаний в Яндекс.Директ, Google Ads и LinkedIn. За 2 месяца при бюджете ≈ $2,3K — 18K+ кликов и 380+ конверсий; CR в Яндекс.Директ — 2,12%, CTR в Google Ads — до 7,5%, ER в LinkedIn — до 1,4%.</li>
           <li>— Ведение корпоративных соцсетей и <a href="https://unitify.com/en/blog" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">блога</a>: контент-план, публикации и развитие <a href="https://www.linkedin.com/company/unitifyandmanage/" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">LinkedIn-страницы</a> — органический рост с 10 до 170+ подписчиков за 2 месяца.</li>
           <li>— Подготовка контента и коммуникации для B2B-партнёров и медиа (RU/EN): презентации, рекламные материалы, адаптация и переводы.</li>
-          <li>— Организация участия в отраслевых мероприятиях, включая <a href="https://unitify.com/en/blog/key-takeaways-from-move-summit-in-tashkent" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">MOVE Summit 2026</a> (Ташкент) и <a href="https://unitify.com/en/blog/what-mipim-2026-revealed-about-ai-in-real-estate" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">MIPIM 2026</a> (Канны).</li>
+          <li>— Организация участия в отраслевых мероприятиях, включая <a href="https://unitify.com/en/blog/key-takeaways-from-move-summit-in-tashkent" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">MOVE Summit 2026</a> (Ташкент),&nbsp;<a href="https://unitify.com/en/blog/what-mipim-2026-revealed-about-ai-in-real-estate" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">MIPIM 2026</a> (Канны) и Realty Forum Batumi.</li>
           <li>— Сопровождение переговоров фаундера: follow-up коммуникация, координация договорённостей и партнёрских процессов.</li>
         </ul>
       </div>
@@ -54,35 +54,35 @@ const jobs: Job[] = [
     company: "Megamod",
     meta: "Gaming Ecosystem",
     period: "февр. 2022 — нояб. 2025",
-    role: "Marketing Executive",
+    role: "Marketing Communications Executive",
     body: <p className="text-muted-foreground">Отвечала за международную B2B-коммуникацию и партнёрский маркетинг: аналитические брифы и отчёты для совета директоров и инвесторов (RU/EN), корпоративные соцсети, блог и датарум. Готовила партнёрские встречи фаундера, работала с международными CustDev-воронками (350+ компаний, 2K+ LinkedIn-контактов, 500+ email). Сопровождала коммуникацию с инвестфондами: аутрич, ньюслеттер, организация встреч для базы из 100+ международных фондов.</p>,
   },
   {
     company: "Ridero",
     meta: <><span>Издательская платформа · </span><a href="https://ridero.ru/" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">ridero.ru</a></>,
     period: "нояб. 2015 — окт. 2021",
-    role: "PR-менеджер",
+    role: "PR-директор",
     body: <p className="text-muted-foreground">Контент-маркетинг, PR и образовательные проекты платформы: блог, email-рассылки, корпоративные соцсети, вебинары и партнёрские проекты. Квартальные аналитические отчёты для совета директоров, совместный маркетинг с партнёрами, PR-коммуникация — пресс-релизы, СМИ, материалы для спикеров. Организовала и провела 200+ вебинаров и образовательных событий, продюсировала видео- и email-курсы. Запустила выставочное направление, которое в 2021 году принесло компании 30% от общей ежегодной выручки.</p>,
   },
   {
     company: "Bosco di Ciliegi",
     meta: "Люксовый ритейл («Боско–Урал»)",
     period: "февр. — нояб. 2015",
-    role: "Ассистент гендиректора · менеджер по рекламе и маркетингу",
+    role: "Менеджер по рекламе и маркетингу",
     body: <p className="text-muted-foreground">Локальные маркетинговые коммуникации fashion- и luxury-брендов: Hugo Boss, Armani Collezioni, Etro, Carrera y Carrera. Размещение рекламы в глянце и наружке, клиентские мероприятия (презентации, показы, выставки), коммуникация и перевод на международных тренингах брендов (EN/RU).</p>,
   },
   {
     company: "Honeymoon",
     meta: "Свадьбы за границей",
     period: "июль 2010 — дек. 2014",
-    role: "Сооснователь · директор по маркетингу",
-    body: <p className="text-muted-foreground">Предпринимательский опыт: вместе с партнёром развивала агентство свадеб и мероприятий за границей. Отвечала за продукт, клиентский сервис и маркетинг, стратегию продвижения, соцсети, рекламу, B2B-переговоры с международными партнёрами (EN). Организовала 320+ свадебных мероприятий в 17 странах мира.</p>,
+    role: "Сооснователь · Директор по маркетингу",
+    body: <p className="text-muted-foreground">Предпринимательский опыт: вместе с партнёром развивала агентство свадеб и мероприятий за границей. Отвечала за продукт, клиентский сервис и маркетинг, стратегию продвижения, соцсети, рекламу, B2B-переговоры with международными партнёрами (EN). Организовала 320+ свадебных мероприятий в 17 странах мира.</p>,
   },
   {
     company: "«Австралийские каникулы»",
     meta: "Туроператор по Австралии и Новой Зеландии",
     period: "февр. 2008 — июль 2009",
-    role: "Руководитель московского офиса · директор по маркетингу",
+    role: "Руководитель московского офиса · Директор по маркетингу",
     body: <p className="text-muted-foreground">Запуск и развитие московского офиса туроператора: маркетинг, продажи, соцсети и блог, коммуникация с клиентами и партнёрами, взаимодействие с посольствами Австралии и Новой Зеландии по вопросам визовой поддержки и совместных проектов.</p>,
   },
   {
