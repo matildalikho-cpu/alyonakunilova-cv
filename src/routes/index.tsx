@@ -110,7 +110,7 @@ function Spoiler({ children }: { children: React.ReactNode }) {
       tabIndex={0}
       onClick={() => setRevealed((v) => !v)}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setRevealed((v) => !v); } }}
-      className={`cursor-pointer rounded px-1 transition-all ${revealed ? "bg-transparent text-inherit" : "bg-foreground/85 text-transparent select-none"}`}
+      className={`cursor-pointer transition-all ${revealed ? "text-inherit" : "text-muted-foreground/25 select-none"}`}
       title={revealed ? "Скрыть" : "Показать"}
     >
       {children}
