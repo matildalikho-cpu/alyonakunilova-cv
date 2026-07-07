@@ -275,8 +275,9 @@ function Resume() {
       <section id="education" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Образование</SectionTitle>
         <div className="grid gap-5 md:grid-cols-2">
-          {education.map((e) => (
-            <div key={e.place + e.what} className="rounded-3xl border border-border bg-card p-7">
+          {education.map((e, i) => (
+            <div key={i} className="rounded-3xl border border-border bg-card p-7">
+
               <h3 className="text-xl font-bold">{e.place}</h3>
               <p className="mt-2 text-foreground/85">{e.what}</p>
               <p className="mt-3 text-sm text-muted-foreground">{e.note}</p>
