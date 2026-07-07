@@ -101,12 +101,30 @@ const skillGroups = [
   { title: "Языки", items: ["Английский — C1", "Русский — родной"] },
 ];
 
-const education = [
+function Spoiler({ children }: { children: React.ReactNode }) {
+  const [revealed, setRevealed] = React.useState(false);
+  return (
+    <span
+      role="button"
+      tabIndex={0}
+      onClick={() => setRevealed((v) => !v)}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setRevealed((v) => !v); } }}
+      className={`cursor-pointer rounded px-1 transition-all ${revealed ? "bg-transparent text-inherit" : "bg-foreground/85 text-transparent select-none"}`}
+      title={revealed ? "Скрыть" : "Показать"}
+    >
+      {children}
+    </span>
+  );
+}
+
+const education: { place: React.ReactNode; what: string; note: string }[] = [
   { place: "МГИМО", what: "Международный маркетинг", note: "профессиональная переподготовка · отлично" },
   { place: "Институт Международных Связей", what: "Связи с общественностью", note: "специалист · отлично" },
   { place: "УГТУ–УПИ (УрФУ)", what: "Менеджмент", note: "специалист · отлично" },
   { place: "Институт Международных Связей", what: "Переводчик в сфере профессиональной коммуникации", note: "повышение квалификации" },
+  { place: <Spoiler>Свободный университет</Spoiler>, what: "Урбанистика и социология городов", note: "слушатель" },
 ];
+
 
 const projects: React.ReactNode[] = [
   <span>Куратор/Продюсер/Лектор: Музей истории Екатеринбурга (проект <a href="https://youtu.be/72W1vbg3erE" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">«Лаборатория воспоминаний»</a>) (2019 – 2022)</span>,
