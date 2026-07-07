@@ -214,12 +214,8 @@ function Resume() {
               <p className="text-lg leading-relaxed text-foreground/85">В больших корпорациях, в стартапах и самостоятельно. С кросс-функциональными командами и подрядчиками, разработчиками и креативными специалистами, топ-менеджерами и фаундерами — со всеми нахожу общий язык и легко осваиваю новый контекст.</p>
             </div>
           </div>
-          <div className="mt-6 grid gap-6 md:grid-cols-5">
-            <div className="rounded-3xl border border-border bg-background p-8 md:col-span-2">
-              <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">Что люблю</div>
-              <p className="text-lg leading-relaxed text-foreground/85">Интеллектуальные задачи, где нужно быстро разобраться в теме и превратить хаос в систему. Мне комфортна как работа с конкретной зоной ответственности, так и многозадачные роли.</p>
-            </div>
-            <div className="rounded-3xl border border-border bg-background p-8 md:col-span-3">
+          <div className="mt-6 grid gap-6">
+            <div className="rounded-3xl border border-border bg-background p-8">
               <div className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">Сегодня</div>
               <p className="text-lg leading-relaxed text-foreground/85">Работаю в международном стартапе для управдомов и управляющих компаний. Отвечаю за маркетинговые коммуникации: контент для блога и соцсетей, презентационные материалы, лидогенерацию, ивенты, скрипты для продаж и коммерческие предложения. Активно использую AI-инструменты в работе.</p>
             </div>
