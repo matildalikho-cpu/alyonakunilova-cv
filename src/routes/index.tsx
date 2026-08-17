@@ -184,7 +184,7 @@ function Resume() {
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="#contacts" className="inline-flex items-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent">Контакты ↓</a>
             </div>
-            <p className="mt-4 text-xs text-muted-foreground">© Алёна Кунилова</p>
+            <p className="mt-4 text-xs text-muted-foreground">{"\n"}</p>
           </div>
           <div className="shrink-0">
             <div className="relative flex h-40 w-40 items-center justify-center overflow-hidden rounded-3xl bg-[var(--kontur-orange)] md:h-56 md:w-56">
