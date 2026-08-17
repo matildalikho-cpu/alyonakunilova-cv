@@ -133,7 +133,7 @@ const projects: React.ReactNode[] = [
   <span>Партнёр по рекламным интеграциям и коллаборациям: подкаст <a href="https://www.instagram.com/podcastmampochitai/" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">«Мам, почитай»</a> (2021 – 2022)</span>,
   <span>Редактор: Продюсерский центр Андрея Кончаловского (проект <a href="https://vk.com/istoriya_ot_pervogo_lica" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">«Истории от первого лица»</a>) (2021)</span>,
   <span>Редактор проекта «Код города» — книга о ДНК Екатеринбурга (готовится к изданию)</span>,
-  <span>Участник сообщества <a href="https://t.me/ekbwalk" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">«Екб_гуляем»</a>, автор городских прогулок и паблика <a href="https://t.me/ulitsabazhova" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">«Улица Бажова»</a></span>,
+  <span>Участник сообщества <a href="https://t.me/ekbwalk" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">«Екб_гуляем»</a>, автор <a href="https://ulitsa-bazhova.ru/" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">городских прогулок</a> и паблика <a href="https://t.me/ulitsabazhova" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">«Улица Бажова»</a></span>,
 ];
 
 const images = [
