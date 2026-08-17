@@ -173,7 +173,7 @@ function Resume() {
           <div className="flex-1">
             <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl">Алёна Кунилова</h1>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              Marketing &amp; Brand Communications&nbsp;
+              Маркетинговые коммуникации
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
               &nbsp;
