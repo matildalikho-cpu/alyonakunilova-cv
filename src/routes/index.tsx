@@ -36,7 +36,7 @@ const jobs: Job[] = [
     company: "Unitify",
     meta: <><span>SaaS для управления недвижимостью · </span><a href="https://unitify.com/" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">unitify.com</a></>,
     period: "нояб. 2025 — н.в.",
-    role: "Head of Global Partnership",
+    role: "Marketing Lead",
     body: (
       <div>
         <p>Отвечаю за международную B2B-коммуникацию и digital-продвижение PropTech-продукта:</p>
