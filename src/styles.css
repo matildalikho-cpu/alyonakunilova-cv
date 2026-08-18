@@ -82,10 +82,10 @@
   --border: oklch(0.92 0.005 80);
   --input: oklch(0.92 0.005 80);
   --ring: oklch(0.16 0 0);
-  --kontur-green: oklch(0.78 0.17 155);
-  --kontur-orange: oklch(0.78 0.17 55);
-  --kontur-purple: oklch(0.65 0.2 290);
-  --kontur-pink: oklch(0.72 0.12 15);
+  --accent-green: oklch(0.78 0.17 155);
+  --accent-orange: oklch(0.78 0.17 55);
+  --accent-purple: oklch(0.65 0.2 290);
+  --accent-pink: oklch(0.72 0.12 15);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
