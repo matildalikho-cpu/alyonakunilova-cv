@@ -187,7 +187,7 @@ function Resume() {
             <p className="mt-4 text-xs text-muted-foreground">{"\n"}</p>
           </div>
           <div className="shrink-0">
-            <div className="relative flex h-40 w-40 items-center justify-center overflow-hidden rounded-3xl bg-[var(--kontur-orange)] md:h-56 md:w-56">
+            <div className="relative flex h-40 w-40 items-center justify-center overflow-hidden rounded-3xl bg-[var(--accent-orange)] md:h-56 md:w-56">
               <img src={alenaPhoto} alt="Алёна Кунилова" className="h-full w-full object-cover" />
             </div>
           </div>
@@ -288,7 +288,7 @@ function Resume() {
           <ul className="space-y-4">
             {projects.map((p, i) => (
               <li key={i} className="flex gap-4 rounded-2xl border border-border bg-background p-6 text-lg text-foreground/85">
-                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--kontur-green)]" />
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--accent-green)]" />
                 <span>{p}</span>
               </li>
             ))}
