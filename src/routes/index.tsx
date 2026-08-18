@@ -299,14 +299,10 @@ function Resume() {
 
       <section id="contacts" className="scroll-mt-20 mx-auto max-w-6xl px-6 py-20">
         <SectionTitle>Контакты</SectionTitle>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           <a href="mailto:salyona@gmail.com" className="group rounded-3xl border border-border bg-card p-6 transition-colors hover:border-primary">
             <div className="text-sm text-muted-foreground">Почта</div>
             <div className="mt-2 text-lg font-medium text-foreground group-hover:text-primary">salyona@gmail.com</div>
-          </a>
-          <a href="tel:+79120486250" className="group rounded-3xl border border-border bg-card p-6 transition-colors hover:border-primary">
-            <div className="text-sm text-muted-foreground">Телефон</div>
-            <div className="mt-2 text-lg font-medium text-foreground group-hover:text-primary">+7 912 048-62-50</div>
           </a>
           <a href="https://t.me/AlyonaRocket" target="_blank" rel="noreferrer" className="group rounded-3xl border border-border bg-card p-6 transition-colors hover:border-primary">
             <div className="text-sm text-muted-foreground">Telegram</div>
